@@ -1,0 +1,82 @@
+# Contoh GitHub Actions Workflow: CI Build & Test
+# =================================================
+# Workflow ini mengikuti best practice dari skill 07-cicd-pipeline:
+# - Fail-fast principle (lint → test → scan)
+# - Dependency caching untuk kecepatan
+# - Security scanning otomatis
+# - Coverage gate (gagal jika di bawah ambang batas)
+
+name: CI — Build & Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+# Mencegah eksekusi duplikat pada PR yang sama
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Lint, Test & Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      # 1. Checkout kode sumber
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js dengan caching otomatis
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      # 3. Instal dependensi
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Lint (tahap paling cepat gagal — fail-fast)
+      - name: Run linter
+        run: npm run lint
+
+      # 5. Unit Test dengan coverage report
+      - name: Run unit tests with coverage
+        run: npm run test:cov
+
+      # 6. Gagalkan jika coverage di bawah 80%
+      - name: Check coverage threshold
+        run: |
+          COVERAGE=$(cat coverage/coverage-summary.json | jq '.total.lines.pct')
+          echo "Code Coverage: ${COVERAGE}%"
+          if (( $(echo "$COVERAGE < 80" | bc -l) )); then
+            echo "❌ Coverage ${COVERAGE}% di bawah ambang batas 80%"
+            exit 1
+          fi
+          echo "✅ Coverage ${COVERAGE}% memenuhi ambang batas"
+
+      # 7. Security audit (npm audit)
+      - name: Security audit
+        run: npm audit --audit-level=high
+
+      # 8. Build aplikasi (verifikasi build berhasil)
+      - name: Build application
+        run: npm run build
+
+      # 9. Upload coverage report sebagai artifact
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7

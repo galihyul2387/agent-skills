@@ -1,0 +1,34 @@
+# Atur line ending otomatis ke LF untuk konsistensi lintas platform
+* text=auto eol=lf
+
+# File Markdown
+*.md text eol=lf
+
+# File Konfigurasi
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Dockerfile & Docker Compose
+Dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+
+# Shell Scripts
+*.sh text eol=lf
+
+# File Biner (jangan ubah line ending)
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
