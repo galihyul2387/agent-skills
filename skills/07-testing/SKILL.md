@@ -28,7 +28,7 @@ UAT dilakukan oleh *Product Owner*, *Business Analyst*, atau perwakilan pengguna
 
 ## 2. Dokumen & Pelaporan Pengujian (Testing Documents)
 
-Setiap sesi pengujian wajib menghasilkan dan mendokumentasikan laporan formal berikut:
+Setiap sesi pengujian wajib menghasilkan dan mendokumentasikan laporan formal (dapat disusun dalam **Bahasa Indonesia** atau **English** sesuai kebutuhan tim):
 *   **Test Plan (Rencana Pengujian):** Dokumen strategi yang merangkum ruang lingkup (*scope*), jadwal, lingkungan pengujian, dan pembagian sumber daya.
 *   **Test Cases Matrix (SIT & UAT Test Cases):** Lembar kerja terstruktur berisi ID uji, langkah-langkah eksekusi, data masukan, hasil yang diharapkan (*Expected Result*), dan status aktual (*Pass/Fail*).
 *   **Bug Report / Issue Log:** Catatan tiket pelacakan (Jira/GitHub Issues) yang memuat tingkat keparahan (*Severity*: Critical, High, Medium, Low), langkah reproduksi (*Steps to Reproduce*), serta bukti tangkapan layar.

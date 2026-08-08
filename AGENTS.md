@@ -1,8 +1,9 @@
 # Aturan Global — MyAgent Workspace (Polyglot / Multi-Language)
 
-## Bahasa & Penulisan
-*   Gunakan **Bahasa Indonesia** sebagai bahasa utama untuk dokumentasi, komentar penjelasan bisnis, PRD, dan panduan skill.
-*   Gunakan **Bahasa Inggris** untuk penamaan teknis standar industri: variabel, fungsi, class, method, interface, file, rute API, dan commit messages.
+## Bahasa & Penulisan (Language Selection)
+*   **Pilihan Bahasa Pembuatan Dokumen:** Dokumen teknis, PRD, *User Story*, *Test Plan*, *Test Cases*, *Architecture Design*, laporan analisis, dan catatan rilis dapat disusun dalam **Bahasa Indonesia (Default)** atau **Bahasa Inggris (English)** sesuai preferensi pengguna atau kebutuhan tim.
+*   **Konsistensi Dokumen:** Pastikan dalam satu dokumen menggunakan satu bahasa yang konsisten (jangan mencampuradukkan bahasa dalam satu dokumen).
+*   **Penamaan Teknis Standar Industri:** Seluruh penamaan variabel, fungsi, method, class, interface, nama file, rute API, dan commit messages wajib tetap menggunakan **Bahasa Inggris** (English).
 
 ## Konvensi Universal Lintas Bahasa (Language-Agnostic)
 *   **Clean Code & SRP:** Setiap fungsi/method wajib memiliki **satu tanggung jawab tunggal** (*Single Responsibility Principle*).

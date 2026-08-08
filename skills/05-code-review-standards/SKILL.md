@@ -80,6 +80,8 @@ Tahap ini berfokus pada penerapan proses *code review* yang efektif, standar pen
 
 ## 4. Documentation Standards
 
+Dokumentasi proyek (README.md, CHANGELOG.md, dan API docs) dapat ditulis dalam **Bahasa Indonesia (Default)** atau **English** sesuai preferensi tim:
+
 ### README.md
 Setiap repositori atau *microservice* wajib memiliki `README.md` yang berisi:
 *   📋 **Deskripsi Proyek:** Penjelasan singkat tentang apa yang dilakukan layanan ini.

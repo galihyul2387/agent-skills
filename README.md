@@ -87,9 +87,9 @@ Setiap modul dilengkapi dengan panduan strategis, cheat sheet perintah, panduan 
 
 Semua agen dan pengembang wajib mematuhi aturan universal yang terdefinisi pada [AGENTS.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/AGENTS.md):
 
-### 🌐 Bahasa & Konvensi
-* Gunakan **Bahasa Indonesia** sebagai bahasa utama untuk dokumentasi, komentar kode, dan penamaan variabel bisnis deskriptif.
-* Gunakan **Bahasa Inggris** untuk penamaan teknis standar industri (variabel, fungsi, *class*, *file*, *endpoint* API).
+### 🌐 Bahasa & Konvensi (Language Selection)
+* **Pilihan Bahasa Dokumen:** Dokumen teknis, PRD, *User Story*, *Test Plan*, laporan analisis, dan arsitektur dapat disusun dalam **Bahasa Indonesia (Default)** atau **Bahasa Inggris (English)** sesuai preferensi tim/klien.
+* **Bahasa Penamaan Teknis:** Seluruh penamaan variabel, fungsi, *method*, *class*, *interface*, *file*, *endpoint* API, dan commit messages wajib tetap menggunakan **Bahasa Inggris** standar industri.
 
 ### 💻 Standar Kode
 * Selalu gunakan **Strict Mode** pada JavaScript/TypeScript.

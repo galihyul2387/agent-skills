@@ -13,9 +13,9 @@ Tujuan dari tahap ini adalah menyusun fondasi proyek yang jelas, terstruktur, da
 *   Tentukan fitur utama (*core features*) yang wajib ada pada rilis pertama (MVP - *Minimum Viable Product*).
 *   Batasi fitur sekunder untuk dikerjakan pada tahap selanjutnya guna menghindari *scope creep*.
 
-### 2. User Story & Use Cases (Termasuk Kebijakan Sesi)
-*   Petakan siapa pengguna aplikasi (*user persona*).
-*   Tuliskan skenario bagaimana pengguna berinteraksi dengan sistem (contoh: alur login, alur transaksi).
+### 2. User Story & Use Cases (Termasuk Kebijakan Sesi & Bahasa Dokumen)
+*   **Pilihan Bahasa Dokumen PRD:** Dokumen PRD dan *User Stories* dapat disusun dalam **Bahasa Indonesia** atau **English** sesuai target pembaca / stakeholders proyek.
+*   **Petakan Pengguna & Alur Kerja:** Petakan siapa pengguna aplikasi (*user persona*) dan skenario interaksi sistem (contoh: alur login, alur transaksi).
 *   **Definisi Kebijakan Sesi:** Rencanakan aturan bahwa setiap akun hanya diizinkan aktif di **1 perangkat/browser** dalam satu waktu dan membatasi penggunaan secara bersamaan di banyak tab (*Single Session & Tab Concurrency Control*).
 
 ### 3. Pemilihan Tech Stack & Kompatibilitas
