@@ -17,7 +17,7 @@ Tahap ini berfokus pada pengemasan (*containerization*) aplikasi berbasis *micro
     *   **Golang:** `golang:1.22-alpine` (build) ➔ `scratch` / `distroless/static` (runtime image < 20MB)
     *   **Java / Kotlin:** `eclipse-temurin:21-jre-alpine` atau `distroless/java21`
     *   **PHP:** `php:8.3-fpm-alpine` (didampingi Nginx alpine container)
-    *   **C# / .NET:** `mcr.microsoft.com/dotnet/aspnet:8.0-alpine` atau chiseled images
+    *   **C# / .NET 10:** `mcr.microsoft.com/dotnet/aspnet:10.0-alpine` atau `10.0-chiseled` (ekstra ringan & aman)
     *   **Rust:** `rust:1.77-alpine` (build) ➔ `scratch` / `alpine` (runtime image < 15MB)
 *   **Non-Root User:** Jalankan container aplikasi menggunakan pengguna non-root (*non-root user*) demi mencegah eskalasi hak istimewa jika terjadi kerentanan pada container.
 

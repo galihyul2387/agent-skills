@@ -20,7 +20,7 @@
 | **Golang** | `gofmt` / `goimports` | `golangci-lint` | `go test` | Idiomatic Go, explicit error check (`if err != nil`), zero panic |
 | **Java / Kotlin** | Spotless / Google Java | Checkstyle / SonarLint / Detekt | JUnit 5 / Mockito | SOLID, Clean Architecture, Lombok/Records, Spring/Micronaut |
 | **PHP** | PHP-CS-Fixer (PSR-12) | PHPStan (Level 8+) / Psalm | PHPUnit / Pest | `declare(strict_types=1);`, Typed properties, Composer |
-| **C# / .NET** | `dotnet format` | Roslyn Analyzers / StyleCop | xUnit / NUnit | Nullable reference types enabled, Async/Await standard |
+| **C# / .NET 10** | `dotnet format` | Roslyn Analyzers / StyleCop | xUnit / NUnit | .NET 10 LTS, C# 13+, Nullable enabled, Primary constructors, Async/Await |
 | **Rust** | `rustfmt` | Clippy | `cargo test` | Idiomatic Rust, zero `unsafe` tanpa justifikasi ketat |
 
 ## Keamanan Global (DevSecOps)

@@ -25,12 +25,12 @@ Folder ini berisi 10 panduan skill modular yang memandu seluruh tahapan pengemba
 
 Katalog skill ini dapat diterapkan langsung pada berbagai bahasa pemrograman modern:
 
-* 🟢 **TypeScript / JavaScript:** Node.js, Next.js, React, Vue, NestJS, Express (Jest, ESLint, Prettier).
+* 🟢 **TypeScript / JavaScript:** Angular 17+ (Signals, Standalone, `@defer`), React, Next.js, Vue, NestJS, Express (`ng test`, Vitest, ESLint, Prettier).
 * 🔵 **Python:** FastAPI, Django, Flask (PyTest, Ruff, Black, MyPy).
 * 🩵 **Golang:** Gin, Fiber, Echo, gRPC (`go test`, `golangci-lint`, `gofmt`).
 * 🔴 **Java / Kotlin:** Spring Boot, Micronaut, Quarkus (JUnit 5, Mockito, Spotless).
 * 🟣 **PHP:** Laravel, Symfony (Pest, PHPUnit, PHPStan, PHP-CS-Fixer).
-* 🔷 **C# / .NET:** ASP.NET Core Minimal API / Web API (xUnit, Roslyn, `dotnet format`).
+* 🔷 **C# / .NET 10:** ASP.NET Core 10 Minimal API / Web API (Native AOT, EF Core 10, xUnit, Roslyn, `dotnet format`).
 * 🦀 **Rust:** Actix-web, Axum, Tonic (`cargo test`, Clippy, `rustfmt`).
 
 ---

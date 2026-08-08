@@ -13,19 +13,49 @@ Tahap ini berfokus pada implementasi antarmuka, arsitektur modular, efisiensi AI
 *   **Pilihan Framework UI:** Gunakan framework modern berbasis komponen yang sesuai dengan spesifikasi proyek:
     *   **React / Next.js:** Ekosistem besar, Server Components, SSR/SSG, kaya pustaka pihak ketiga.
     *   **Vue / Nuxt:** Reaktivitas fleksibel, Composition API, performa tinggi, kurva belajar ramah.
-    *   **Angular:** Framework *all-in-one* berskala enterprise dengan Dependency Injection & RxJS terintegrasi.
+    *   **Angular 17+ (TypeScript):** Framework enterprise dengan Standalone Components, Signals, dan New Control Flow.
     *   **Svelte / SvelteKit:** Kompilasi *no-virtual-DOM*, bundle sangat kecil, reaktivitas bawaan (*run-time speed*).
     *   **Flutter / React Native:** Pilihan untuk pengembangan aplikasi mobile lintas platform (*cross-platform*).
 *   **Komponen Modular & Reusable:** Susun struktur berbasis *Atomic Design* atau *Feature-driven layout* agar komponen mudah digunakan kembali.
 *   **Responsivitas & Aksesibilitas:** Pastikan tampilan responsif di seluruh resolusi (mobile, tablet, desktop).
 
-### Integrasi AI dalam Coding
-*   Gunakan Cursor, Claude Code, atau Codex untuk mempercepat penulisan komponen dan *debugging*.
-*   Pastikan kode yang dihasilkan AI ditinjau (*code review*) agar tetap bersih, terstandarisasi, dan efisien.
+---
+
+## 2. Standar Arsitektur Modern Angular 17+ (TypeScript)
+
+Bagi proyek yang menggunakan **Angular versi 17 ke atas (17/18/19+)**, wajib menerapkan standar arsitektur modern berikut:
+
+### Standalone Components by Default
+*   **Zero NgModule:** Jangan gunakan `NgModule` untuk fitur baru. Seluruh komponen, pipe, dan direktif wajib bertipe `standalone: true`.
+*   **Explicit Dependency Imports:** Deklarasikan dependensi komponen secara mandiri melalui atribut `imports: [CommonModule, RouterLink, MyComponent]` di decorator `@Component`.
+
+### Signals & Reaktivitas Modern (Fine-Grained Reactivity)
+*   **Angular Signals (`signal`, `computed`, `effect`):** Gunakan Signals untuk mengelola *local state* komponen secara deklaratif tanpa memicu deteksi perubahan (*dirty checking*) seluruh pohon DOM.
+*   **Signal Inputs & Outputs:** Gunakan `input()`, `input.required()`, dan `output()` menggantikan dekorator klasik `@Input()` dan `@Output()`.
+*   **RxJS Interop:** Gunakan `toSignal()` dan `toObservable()` dari `@angular/core/rxjs-interop` saat mengonsumsi data stream dari service HTTP.
+
+### New Built-in Control Flow (Pengganti Structural Directives)
+*   Gunakan sintaks bawaan baru yang lebih cepat dan mudah dibaca:
+    *   `@if (isLoggedIn()) { ... } @else { ... }` — Menggantikan `*ngIf`.
+    *   `@for (item of items(); track item.id) { ... } @empty { ... }` — Menggantikan `*ngFor` (wajib menyertakan `track` untuk performa rendering tinggi).
+    *   `@switch (status()) { @case ('active') { ... } @default { ... } }` — Menggantikan `*ngSwitch`.
+
+### Deferrable Views (`@defer` untuk Optimalisasi Bundle)
+*   Gunakan blok `@defer` untuk *lazy loading* komponen berat secara deklaratif:
+    *   `@defer (on viewport)` — Komponen hanya dimuat saat terlihat di layar pengguna.
+    *   `@placeholder` — Tampilan *skeleton* sebelum komponen dimuat.
+    *   `@loading (minimum 500ms)` — Tampilan *spinner* saat komponen sedang diunduh.
+
+### SSR & Non-Destructive Hydration
+*   Aktifkan *hydration* penuh pada aplikasi SSR/SSG menggunakan `provideClientHydration()` di `app.config.ts` untuk meningkatkan metrik *Core Web Vitals* (LCP & CLS).
+
+### State Management di Angular 17+
+*   **NgRx SignalStore (`@ngrx/signals`):** Standar utama state management modular berbasis Signals.
+*   **ComponentStore / Services with Signals:** Untuk state lokal/fitur tanpa dependensi eksternal berat.
 
 ---
 
-## 2. Kontrol Sesi Login: 1 Perangkat & 1 Tab Aktif (Lintas Browser)
+## 3. Kontrol Sesi Login: 1 Perangkat & 1 Tab Aktif (Lintas Browser)
 
 Untuk menjaga keamanan akun dan mencegah benturan data (*state race condition*), terapkan mekanisme pembatasan sesi yang kompatibel di semua browser:
 
@@ -41,7 +71,7 @@ Untuk menjaga keamanan akun dan mencegah benturan data (*state race condition*),
 
 ---
 
-## 3. Validasi & Sanitasi Input (Input Validation Best Practices)
+## 4. Validasi & Sanitasi Input (Input Validation Best Practices)
 
 Validasi di sisi frontend berfungsi untuk memberikan umpan balik (*feedback*) instan kepada pengguna, namun **bukan** sebagai pengganti validasi backend.
 
@@ -52,7 +82,7 @@ Validasi di sisi frontend berfungsi untuk memberikan umpan balik (*feedback*) in
 
 ---
 
-## 4. Keamanan Frontend (Frontend Security Best Practices)
+## 5. Keamanan Frontend (Frontend Security Best Practices)
 
 Mengingat kode berjalan di sisi klien (*browser*), area frontend sangat rentan terhadap manipulasi. Terapkan protokol keamanan berikut:
 
@@ -71,7 +101,7 @@ Mengingat kode berjalan di sisi klien (*browser*), area frontend sangat rentan t
 
 ---
 
-## 5. State Management (Manajemen State Aplikasi)
+## 6. State Management (Manajemen State Aplikasi)
 
 Pengelolaan state yang tepat sangat krusial untuk menjaga konsistensi data di seluruh komponen dan mencegah *prop drilling* yang berlebihan:
 
@@ -88,7 +118,7 @@ Pengelolaan state yang tepat sangat krusial untuk menjaga konsistensi data di se
 
 ---
 
-## 6. Aksesibilitas (Accessibility / a11y)
+## 7. Aksesibilitas (Accessibility / a11y)
 
 Aksesibilitas memastikan aplikasi dapat digunakan oleh semua pengguna, termasuk yang memiliki keterbatasan visual, motorik, atau kognitif:
 
@@ -105,7 +135,7 @@ Aksesibilitas memastikan aplikasi dapat digunakan oleh semua pengguna, termasuk 
 
 ---
 
-## 7. Arsitektur Microfrontend (Opsional untuk Skala Besar)
+## 8. Arsitektur Microfrontend (Opsional untuk Skala Besar)
 
 Pendekatan ini memecah aplikasi monolitik frontend menjadi beberapa bagian independen.
 
@@ -116,20 +146,30 @@ Pendekatan ini memecah aplikasi monolitik frontend menjadi beberapa bagian indep
 
 ---
 
-## ⚡ Command Cheat Sheet
-*   `npm run dev` — Menjalankan lingkungan pengembangan lokal.
+## ⚡ Command Cheat Sheet Lintas Framework
+
+### React / Next.js / Vue / Svelte
+*   `npm run dev` / `pnpm dev` — Menjalankan lingkungan pengembangan lokal.
 *   `npm run lint` — Memeriksa kesalahan penulisan kode (*linter*).
-*   `npm audit` — Memeriksa kerentanan keamanan pada pustaka pihak ketiga.
 *   `npm run build` — Melakukan kompilasi kode untuk tahap produksi.
+*   `npm audit` — Memeriksa kerentanan keamanan pada pustaka pihak ketiga.
+
+### Angular 17+ (TypeScript)
+*   `ng serve` / `npm start` — Menjalankan development server Angular dengan Vite bundler.
+*   `ng build --configuration production` — Membangun aplikasi Angular untuk produksi.
+*   `ng test` — Menjalankan unit test Angular (Karma/Web Test Runner/Vitest).
+*   `ng lint` — Menjalankan ESLint khusus Angular (`@angular-eslint`).
 
 ## 🛠️ Troubleshooting Umum
 *   **Port Terpakai:** Ubah konfigurasi port pada *dev server* atau gunakan perintah terminasi port yang relevan.
 *   **Modul Tidak Ditemukan:** Hapus folder `node_modules` dan file *lock*, lalu jalankan ulang instalasi dependensi (`npm install`).
+*   **Angular Signals NG0100 (ExpressionChangedAfterItHasBeenCheckedError):** Gunakan `computed()` atau `untracked()` untuk menghindari *side-effect* terlarang di dalam *computed signal*.
 
 ## 📐 Standar Penamaan (Naming Conventions)
-*   **Komponen React:** Menggunakan *PascalCase* (contoh: `UserProfile.jsx`).
-*   **File Utilitas/Helper:** Menggunakan *kebab-case* (contoh: `format-date.js`).
-*   **Variabel & Fungsi:** Menggunakan *camelCase* (contoh: `getUserData`).
+*   **Komponen React/Vue:** Menggunakan *PascalCase* (contoh: `UserProfile.jsx`, `UserDashboard.vue`).
+*   **Komponen Angular 17+:** Menggunakan *kebab-case* pada nama file dan *PascalCase* pada class (contoh file: `user-profile.component.ts`, class: `UserProfileComponent`).
+*   **Signals / Variables:** Menggunakan *camelCase* (contoh: `userData = signal<User \| null>(null)`).
+*   **File Utilitas / Service:** Menggunakan *kebab-case* (contoh: `auth.service.ts`, `format-date.ts`).
 
 ---
 
@@ -139,8 +179,13 @@ Pendekatan ini memecah aplikasi monolitik frontend menjadi beberapa bagian indep
     *   [ ] Menerapkan pembatasan 1 tab aktif menggunakan `BroadcastChannel` dan *fallback* `localStorage` agar kompatibel di semua browser.
     *   [ ] Memastikan sistem mendeteksi *login* baru di perangkat/browser lain untuk memutus sesi lama secara otomatis.
     *   [ ] Menerapkan validasi skema input menggunakan pustaka terstandar (Zod/Yup).
+*   **Modern Angular 17+ (Jika menggunakan Angular):**
+    *   [ ] Menggunakan *Standalone Components* (`standalone: true`) tanpa `NgModule`.
+    *   [ ] Menggunakan *Angular Signals* (`signal`, `computed`, `effect`) untuk reaktivitas state.
+    *   [ ] Menggunakan *New Control Flow* (`@if`, `@for` dengan `track`, `@switch`) menggantikan structural directives.
+    *   [ ] Menerapkan `@defer` untuk komponen berat yang dapat di-lazy load.
 *   **State Management & Performa:**
-    *   [ ] Menerapkan strategi *state management* yang sesuai kebutuhan aplikasi (Context API / Redux / Zustand / React Query).
+    *   [ ] Menerapkan strategi *state management* yang sesuai kebutuhan aplikasi (Signals / Context API / Redux / Zustand / React Query).
     *   [ ] Memastikan tidak ada *prop drilling* berlebihan pada komponen bersarang dalam.
 *   **Implementasi UI/UX & AI:**
     *   [ ] Menyusun komponen UI yang modular dan *reusable*.

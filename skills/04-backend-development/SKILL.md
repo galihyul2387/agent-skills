@@ -149,7 +149,7 @@ Pilih framework dan pustaka yang sesuai dengan domain dan kebutuhan performa lay
 | **Golang** | Gin, Fiber, Echo, gRPC | GORM, sqlx, pgx | `go test`, Testify | `golangci-lint`, `gofmt` |
 | **Java / Kotlin** | Spring Boot, Micronaut, Quarkus | Spring Data JPA, Hibernate, jOOQ | JUnit 5, Mockito, Testcontainers | Checkstyle, Spotless |
 | **PHP** | Laravel, Symfony | Eloquent, Doctrine | PHPUnit, Pest | PHPStan, PHP-CS-Fixer |
-| **C# / .NET** | ASP.NET Core Web API / Minimal API | Entity Framework Core, Dapper | xUnit, NUnit, FluentAssertions | Roslyn, `dotnet format` |
+| **C# / .NET 10** | ASP.NET Core 10 Minimal API / Web API (Native AOT) | Entity Framework Core 10, Dapper | xUnit, NUnit, FluentAssertions | Roslyn, `dotnet format` |
 | **Rust** | Actix-web, Axum, Tonic (gRPC) | SQLx, Diesel, SeaORM | `cargo test` | Clippy, `rustfmt` |
 
 ---
