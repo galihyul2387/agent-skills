@@ -21,6 +21,20 @@ Folder ini berisi 10 panduan skill modular yang memandu seluruh tahapan pengemba
 
 ---
 
+## 🌍 Ekosistem & Multi-Bahasa yang Didukung
+
+Katalog skill ini dapat diterapkan langsung pada berbagai bahasa pemrograman modern:
+
+* 🟢 **TypeScript / JavaScript:** Node.js, Next.js, React, Vue, NestJS, Express (Jest, ESLint, Prettier).
+* 🔵 **Python:** FastAPI, Django, Flask (PyTest, Ruff, Black, MyPy).
+* 🩵 **Golang:** Gin, Fiber, Echo, gRPC (`go test`, `golangci-lint`, `gofmt`).
+* 🔴 **Java / Kotlin:** Spring Boot, Micronaut, Quarkus (JUnit 5, Mockito, Spotless).
+* 🟣 **PHP:** Laravel, Symfony (Pest, PHPUnit, PHPStan, PHP-CS-Fixer).
+* 🔷 **C# / .NET:** ASP.NET Core Minimal API / Web API (xUnit, Roslyn, `dotnet format`).
+* 🦀 **Rust:** Actix-web, Axum, Tonic (`cargo test`, Clippy, `rustfmt`).
+
+---
+
 ## 📖 Laporan Analisis Kualitas
 
 Riwayat pengujian, perbaikan bug, audit konsistensi struktural, dan evaluasi kelengkapan skill terdokumentasi lengkap pada [laporan-analisis-skills.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/laporan-analisis-skills.md).

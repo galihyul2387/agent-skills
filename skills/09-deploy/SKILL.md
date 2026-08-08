@@ -9,9 +9,16 @@ Tahap ini berfokus pada pengemasan (*containerization*) aplikasi berbasis *micro
 
 ## 1. Langkah-Langkah Strategis Deployment dengan Docker
 
-### Containerization Strategy (Dockerfiles)
+### Containerization Strategy (Dockerfiles Polyglot)
 *   **Multi-stage Builds:** Gunakan *multi-stage builds* pada Dockerfile untuk memisahkan proses pembangunan kode (*build environment*) dengan hasil akhir untuk produksi (*runtime environment*), sehingga ukuran *image* menjadi sangat kecil dan efisien.
-*   **Base Image yang Aman & Minimalis:** Gunakan *base image* resmi yang ringan dan aman (seperti Alpine Linux atau Debian Slim) untuk memperkecil permukaan serangan (*attack surface*).
+*   **Base Image yang Aman & Minimalis per Ekosistem:**
+    *   **Node.js / TS:** `node:20-alpine` atau `gcr.io/distroless/nodejs20-debian12`
+    *   **Python:** `python:3.12-slim` (dengan virtual environment terisolasi)
+    *   **Golang:** `golang:1.22-alpine` (build) ➔ `scratch` / `distroless/static` (runtime image < 20MB)
+    *   **Java / Kotlin:** `eclipse-temurin:21-jre-alpine` atau `distroless/java21`
+    *   **PHP:** `php:8.3-fpm-alpine` (didampingi Nginx alpine container)
+    *   **C# / .NET:** `mcr.microsoft.com/dotnet/aspnet:8.0-alpine` atau chiseled images
+    *   **Rust:** `rust:1.77-alpine` (build) ➔ `scratch` / `alpine` (runtime image < 15MB)
 *   **Non-Root User:** Jalankan container aplikasi menggunakan pengguna non-root (*non-root user*) demi mencegah eskalasi hak istimewa jika terjadi kerentanan pada container.
 
 ### Orkestrasi Layanan (Docker Compose)

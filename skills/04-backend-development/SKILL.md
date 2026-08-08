@@ -133,26 +133,60 @@ Untuk meningkatkan performa dan mengurangi beban pada database serta layanan bac
 *   **Secrets Management:** Jangan pernah menanam (*hardcode*) kunci API atau kredensial di kode sumber. Gunakan layanan terpusat (HashiCorp Vault, AWS Secrets Manager, atau Environment Variables terenkripsi).
 
 ### Proteksi Injeksi & Komunikasi Layanan
-*   **Pencegahan SQL Injection:** Gunakan *Prepared Statements* atau *ORM* secara konsisten, serta validasi tipe data menggunakan Zod/Joi.
+*   **Pencegahan SQL Injection:** Gunakan *Prepared Statements* atau *ORM/Query Builder* secara konsisten (Prisma/TypeORM di TS, SQLAlchemy di Python, GORM di Go, Hibernate/JPA di Java, Eloquent di PHP, EF Core di C#, Diesel/SQLx di Rust).
 *   **Mutual TLS (mTLS):** Terapkan autentikasi internal antar layanan mikro di jaringan privat agar hanya layanan sah yang dapat berkomunikasi.
 
 ---
 
-## ⚡ Command Cheat Sheet
-*   `npm run start:dev` / `npm run dev` — Menjalankan server pengembangan lokal backend.
-*   `npm run test` — Menjalankan rangkaian unit testing lokal.
-*   `npm run test:cov` — Menjalankan unit testing dengan laporan cakupan kode (*coverage report*).
-*   `npm run migrate` — Menjalankan migrasi perubahan skema basis data.
-*   `npm audit` — Memeriksa kerentanan keamanan pada pustaka backend.
+## 10. Panduan Ekosistem Multi-Bahasa (Polyglot Backend)
+
+Pilih framework dan pustaka yang sesuai dengan domain dan kebutuhan performa layanan:
+
+| Ekosistem | Rekomendasi Framework | ORM / DB Access | Testing Framework | Linter & Formatter |
+|---|---|---|---|---|
+| **Node.js / TS** | NestJS, Express, Fastify | Prisma, Drizzle, TypeORM | Jest, Vitest, Supertest | ESLint, Prettier |
+| **Python** | FastAPI, Django REST, Flask | SQLAlchemy, Tortoise, Django ORM | PyTest, Unittest | Ruff, Black, Flake8 |
+| **Golang** | Gin, Fiber, Echo, gRPC | GORM, sqlx, pgx | `go test`, Testify | `golangci-lint`, `gofmt` |
+| **Java / Kotlin** | Spring Boot, Micronaut, Quarkus | Spring Data JPA, Hibernate, jOOQ | JUnit 5, Mockito, Testcontainers | Checkstyle, Spotless |
+| **PHP** | Laravel, Symfony | Eloquent, Doctrine | PHPUnit, Pest | PHPStan, PHP-CS-Fixer |
+| **C# / .NET** | ASP.NET Core Web API / Minimal API | Entity Framework Core, Dapper | xUnit, NUnit, FluentAssertions | Roslyn, `dotnet format` |
+| **Rust** | Actix-web, Axum, Tonic (gRPC) | SQLx, Diesel, SeaORM | `cargo test` | Clippy, `rustfmt` |
+
+---
+
+## ⚡ Command Cheat Sheet Lintas Bahasa
+
+### Node.js / TypeScript
+*   `npm run start:dev` / `pnpm dev` — Menjalankan server pengembangan backend.
+*   `npm run test:cov` — Menjalankan unit test dengan laporan cakupan kode (*coverage report*).
+*   `npm run prisma:migrate` / `npm run typeorm:migration:run` — Menjalankan migrasi database.
+
+### Python
+*   `uvicorn main:app --reload` / `python manage.py runserver` — Menjalankan server API FastAPI/Django.
+*   `pytest --cov=app --cov-report=html` — Menjalankan test dengan report coverage.
+*   `alembic upgrade head` / `python manage.py migrate` — Menjalankan migrasi schema.
+
+### Golang
+*   `go run main.go` / `air` — Menjalankan server Go dengan live reload.
+*   `go test -v -coverprofile=coverage.out ./...` — Menjalankan test dan membuat profile coverage.
+*   `golangci-lint run` — Memeriksa linter dan kualitas kode Go.
+
+### Java / Kotlin (.NET & PHP)
+*   `./gradlew bootRun` / `./mvnw spring-boot:run` — Menjalankan Spring Boot.
+*   `./gradlew test jacocoTestReport` — Menjalankan JUnit dengan laporan JaCoCo.
+*   `dotnet run` / `dotnet test --collect:"XPlat Code Coverage"` — Menjalankan & menguji .NET API.
+*   `php artisan serve` / `vendor/bin/pest --coverage` — Menjalankan & menguji Laravel API.
 
 ## 🛠️ Troubleshooting Umum
-*   **Koneksi Database Gagal:** Periksa kembali variabel lingkungan (`.env`) untuk kredensial host, port, username, dan password database.
-*   **Port API Bentrok:** Ubah konfigurasi port server backend pada file `.env` (misal dari port 3000 ke 5000).
+*   **Koneksi Database Gagal:** Periksa kembali variabel lingkungan (`.env` / config) untuk host, port, username, password, dan status koneksi database.
+*   **Port API Bentrok:** Ubah konfigurasi port server backend pada file environment (misal dari port 3000 ke 5000/8080).
+*   **Missing Dependency / Build Error:** Bersihkan cache package manager (`npm cache clean`, `pip cache purge`, `go clean -modcache`, `./gradlew clean`) lalu instal ulang dependensi.
 
 ## 📐 Standar Penamaan (Naming Conventions)
-*   **File & Folder:** Menggunakan *kebab-case* atau *snake_case* (contoh: `user_controller.js`, `auth-service.ts`).
-*   **Variabel, Fungsi & Route API:** Menggunakan *camelCase* untuk fungsi/variabel, dan *kebab-case* atau *snake_case* untuk endpoint URL (contoh: `/api/v1/user-profile`).
-*   **Model / Tabel Database:** Menggunakan bentuk jamak (*plural* dalam *snake_case* atau *PascalCase* tergantung ORM, contoh: `users`, `user_sessions`).
+*   **File & Folder:** Menggunakan *kebab-case* atau *snake_case* sesuai standar bahasa (contoh: `user_controller.py`, `auth-service.ts`, `UserController.java`).
+*   **Variabel & Method:** Menggunakan *camelCase* (TS/Java/Go/PHP) atau *snake_case* (Python/Rust) atau *PascalCase* (C# public methods).
+*   **Route API:** Selalu menggunakan *kebab-case* huruf kecil (contoh: `/api/v1/user-profiles`).
+*   **Model / Tabel Database:** Menggunakan bentuk jamak (*plural* dalam *snake_case*, contoh: `users`, `user_sessions`).
 
 ---
 

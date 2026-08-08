@@ -9,13 +9,19 @@ Tahap ini berfokus pada implementasi antarmuka, arsitektur modular, efisiensi AI
 
 ## 1. Langkah-Langkah Strategis Frontend
 
-### Implementasi UI/UX
-*   Konversi desain ke dalam komponen yang *reusable* menggunakan React.
-*   Pastikan responsivitas dan aksesibilitas antarmuka pengguna.
+### Implementasi UI/UX & Pilihan Framework
+*   **Pilihan Framework UI:** Gunakan framework modern berbasis komponen yang sesuai dengan spesifikasi proyek:
+    *   **React / Next.js:** Ekosistem besar, Server Components, SSR/SSG, kaya pustaka pihak ketiga.
+    *   **Vue / Nuxt:** Reaktivitas fleksibel, Composition API, performa tinggi, kurva belajar ramah.
+    *   **Angular:** Framework *all-in-one* berskala enterprise dengan Dependency Injection & RxJS terintegrasi.
+    *   **Svelte / SvelteKit:** Kompilasi *no-virtual-DOM*, bundle sangat kecil, reaktivitas bawaan (*run-time speed*).
+    *   **Flutter / React Native:** Pilihan untuk pengembangan aplikasi mobile lintas platform (*cross-platform*).
+*   **Komponen Modular & Reusable:** Susun struktur berbasis *Atomic Design* atau *Feature-driven layout* agar komponen mudah digunakan kembali.
+*   **Responsivitas & Aksesibilitas:** Pastikan tampilan responsif di seluruh resolusi (mobile, tablet, desktop).
 
 ### Integrasi AI dalam Coding
 *   Gunakan Cursor, Claude Code, atau Codex untuk mempercepat penulisan komponen dan *debugging*.
-*   Pastikan kode yang dihasilkan AI ditinjau (*code review*) agar tetap bersih dan efisien.
+*   Pastikan kode yang dihasilkan AI ditinjau (*code review*) agar tetap bersih, terstandarisasi, dan efisien.
 
 ---
 

@@ -1,12 +1,26 @@
-# 🤖 MyAgent — Knowledge Base & Panduan SDLC Modern
-
-[![Skills](https://img.shields.io/badge/Skills-10%20Modules-blue.svg)](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills)
+[![Language Support](https://img.shields.io/badge/Stack-Polyglot%20%7C%20Multi--Language-blueviolet.svg)](#-dukungan-multi-bahasa-pemrograman-polyglot)
 [![Quality Gate](https://img.shields.io/badge/Quality%20Gate-SonarQube%20A%2B-brightgreen.svg)](#-standar-kualitas--aturan-global)
 [![Security](https://img.shields.io/badge/Security-DevSecOps%20Ready-orange.svg)](#-keamanan--best-practices)
 [![Consistency](https://img.shields.io/badge/Structure-100%25%20Consistent-success.svg)](#-katalog-10-modul-skill-sdlc)
 [![Language](https://img.shields.io/badge/Docs-Bahasa%20Indonesia-red.svg)](#-bahasa--konvensi)
 
-> **MyAgent** adalah repositori standar operasional prosedur (*Standard Operating Procedures* / SOP), pedoman teknis (*best practices*), dan panduan skill terstruktur yang dirancang khusus untuk **AI Coding Assistant** (seperti Cursor, Claude Code, Copilot, Codex) dan **Tim Pengembang Perangkat Lunak** guna menjalankan seluruh siklus hidup pengembangan sistem (*Software Development Life Cycle* / SDLC) berbasis **DevSecOps**.
+> **MyAgent** adalah repositori standar operasional prosedur (*Standard Operating Procedures* / SOP), pedoman teknis (*best practices*), dan panduan skill terstruktur yang dirancang khusus untuk **AI Coding Assistant** (seperti Cursor, Claude Code, Copilot, Codex) dan **Tim Pengembang Perangkat Lunak** guna menjalankan seluruh siklus hidup pengembangan sistem (*Software Development Life Cycle* / SDLC) berbasis **DevSecOps** di **seluruh bahasa pemrograman**.
+
+---
+
+## 🌍 Dukungan Multi-Bahasa Pemrograman (Polyglot Ecosystem)
+
+Koleksi skill ini dirancang bersifat **Language-Agnostic** dengan standar idiomatik untuk ekosistem populer:
+
+| Ekosistem | Framework Backend / UI | Testing | Linter & Formatter | Base Container Image |
+|---|---|---|---|---|
+| **TypeScript / Node.js** | NestJS, Express, React, Next.js, Vue | Jest, Vitest, Playwright | ESLint, Prettier | `node:20-alpine`, `distroless` |
+| **Python** | FastAPI, Django REST, Flask | PyTest, Unittest | Ruff, Black, MyPy | `python:3.12-slim` |
+| **Golang** | Gin, Fiber, Echo, gRPC | `go test`, Testify | `golangci-lint`, `gofmt` | `golang:alpine` ➔ `scratch` (<20MB) |
+| **Java / Kotlin** | Spring Boot, Micronaut, Quarkus | JUnit 5, Mockito | Spotless, Checkstyle | `eclipse-temurin:21-jre-alpine` |
+| **PHP** | Laravel, Symfony | Pest, PHPUnit | PHPStan, PHP-CS-Fixer | `php:8.3-fpm-alpine` + Nginx |
+| **C# / .NET** | ASP.NET Core Web API / Minimal API | xUnit, NUnit | Roslyn, `dotnet format` | `mcr.microsoft.com/dotnet/aspnet:8.0` |
+| **Rust** | Actix-web, Axum, Tonic (gRPC) | `cargo test` | Clippy, `rustfmt` | `rust:alpine` ➔ `scratch` (<15MB) |
 
 ---
 

@@ -82,12 +82,23 @@ Untuk memangkas waktu administratif, proses pembuatan dokumen pengujian diotomat
 
 ---
 
-## ⚡ Command Cheat Sheet
-*   `npm run test:e2e` — Menjalankan pengujian End-to-End otomatis.
-*   `npm run test:load` — Menjalankan simulasi pengujian beban ringan.
-*   `k6 run load-test.js` — Menjalankan pengujian performa menggunakan k6.
+## ⚡ Command Cheat Sheet Lintas Bahasa
+
+### TypeScript / JavaScript (E2E & UI)
+*   `npx playwright test --reporter=html` — Menjalankan pengujian E2E dengan laporan HTML.
+*   `npm run test:e2e` / `npx cypress run` — Menjalankan pengujian integrasi antarmuka browser.
+
+### Backend Testing (Multi-Language)
+*   `pytest -v --cov=app` — Menjalankan test suite Python dengan rincian coverage.
+*   `go test -v -race -cover ./...` — Menjalankan unit test Go dengan deteksi *race condition*.
+*   `./gradlew test jacocoTestReport` — Menjalankan test suite Java/Kotlin dengan JaCoCo.
+*   `dotnet test --collect:"XPlat Code Coverage"` — Menjalankan test suite C# / .NET.
+*   `./vendor/bin/pest --coverage` — Menjalankan framework test modern PHP Pest/PHPUnit.
+*   `cargo test --all-targets` — Menjalankan seluruh unit dan integration test di Rust.
+
+### Performance & Security Testing
+*   `k6 run load-test.js` — Menjalankan simulasi pengujian performa menggunakan k6.
 *   `npx zap-cli quick-scan http://localhost:3000` — Menjalankan pemindaian keamanan cepat OWASP ZAP.
-*   `npx playwright test --reporter=html` — Menjalankan E2E test dengan laporan HTML.
 
 ## 🛠️ Troubleshooting Umum
 *   **Environment Mismatch:** Pastikan variabel lingkungan (*environment variables*) pada server pengujian sama persis dengan spesifikasi produksi.

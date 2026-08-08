@@ -118,12 +118,33 @@ Setiap repositori atau *microservice* wajib memiliki `README.md` yang berisi:
 
 ---
 
-## ⚡ Command Cheat Sheet
+## ⚡ Command Cheat Sheet Lintas Bahasa
+
+### TypeScript / JavaScript
 *   `npx prettier --write .` — Memformat seluruh file kode secara otomatis menggunakan Prettier.
 *   `npx eslint . --fix` — Menjalankan ESLint dan memperbaiki masalah yang bisa di-*autofix*.
 *   `npx husky init` — Menginisialisasi Husky untuk *Git hooks*.
 *   `npx commitlint --edit` — Memvalidasi format commit message terakhir.
-*   `npx lint-staged` — Menjalankan linter hanya pada file yang ada di *staging area*.
+*   `npx lint-staged` — Menjalankan linter hanya pada file di *staging area*.
+
+### Python
+*   `ruff check --fix .` — Menjalankan linter Ruff berkecepatan tinggi dengan auto-fix.
+*   `black .` / `ruff format .` — Memformat kode Python secara konsisten sesuai PEP 8.
+*   `mypy .` — Memverifikasi kevalidan *static type hints*.
+
+### Golang
+*   `golangci-lint run --fix` — Menjalankan agregator linter Go dengan perbaikan otomatis.
+*   `gofmt -s -w .` — Memformat dan menyederhanakan kode sumber Go.
+
+### Java / Kotlin
+*   `./gradlew spotlessApply` / `mvn spotless:apply` — Menjalankan formatter Spotless/Google Java.
+*   `./gradlew checkstyleMain` / `./gradlew detekt` — Menjalankan pemeriksaan gaya kode Java/Kotlin.
+
+### PHP & C# / .NET & Rust
+*   `./vendor/bin/phpstan analyse` / `./vendor/bin/php-cs-fixer fix` — Analisis statis PHP & PSR-12 format.
+*   `dotnet format` — Memformat kode C# dan memperbaiki pelanggaran style analyzer.
+*   `cargo clippy -- -D warnings` — Menjalankan linter Rust dengan strict zero-warning policy.
+*   `cargo fmt --check` — Memverifikasi formatting kode Rust.
 
 ## 🛠️ Troubleshooting Umum
 *   **Pre-commit Hook Tidak Berjalan:** Pastikan `husky` sudah terinstal dan direktori `.husky/` berisi script hook yang sesuai. Jalankan `npx husky init` jika perlu.
