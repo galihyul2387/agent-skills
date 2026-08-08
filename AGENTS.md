@@ -1,7 +1,12 @@
 # Aturan Global — MyAgent Workspace (Polyglot / Multi-Language)
 
-## Bahasa & Penulisan (Language Selection)
+[ 🇮🇩 Bahasa Indonesia ](AGENTS.md) | [ 🇬🇧 English ](AGENTS.en.md)
+
+---
+
+## Bahasa & Penulisan (Language Selection & Multi-Language UI)
 *   **Pilihan Bahasa Pembuatan Dokumen:** Dokumen teknis, PRD, *User Story*, *Test Plan*, *Test Cases*, *Architecture Design*, laporan analisis, dan catatan rilis dapat disusun dalam **Bahasa Indonesia (Default)** atau **Bahasa Inggris (English)** sesuai preferensi pengguna atau kebutuhan tim.
+*   **Dukungan Multi-Bahasa UI (i18n & RTL):** Tampilan antarmuka pengguna (UI) mendukung 4 bahasa utama: **🇮🇩 Bahasa Indonesia (ID)**, **🇬🇧 English (EN)**, **🇨🇳 Mandarin / Cina (ZH)**, dan **🇸🇦 Arab (AR - dengan tata letak RTL / Right-to-Left)**.
 *   **Konsistensi Dokumen:** Pastikan dalam satu dokumen menggunakan satu bahasa yang konsisten (jangan mencampuradukkan bahasa dalam satu dokumen).
 *   **Penamaan Teknis Standar Industri:** Seluruh penamaan variabel, fungsi, method, class, interface, nama file, rute API, dan commit messages wajib tetap menggunakan **Bahasa Inggris** (English).
 

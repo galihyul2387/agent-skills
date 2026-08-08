@@ -1,6 +1,10 @@
 ---
 name: backend-complete-development-best-practices
-description: Panduan lengkap untuk Backend Development mencakup arsitektur Microservices, unit testing, SonarQube A+, HTTP Security Headers, logging, bot mitigation, dan keamanan tingkat lanjut.
+description: Panduan lengkap Backend Development polyglot (.NET 10 LTS, Node, Python, Go, Java, PHP, Rust), Microservices, SonarQube A+, HTTP Security Headers, RFC 7807, dan Redis Caching.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: Backend Development, API Layer, Microservices, Testing, SonarQube A+, Security Headers & Bot Mitigation

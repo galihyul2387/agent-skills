@@ -1,6 +1,10 @@
 ---
 name: frontend-complete-development-best-practices
-description: Panduan lengkap dan terstruktur untuk tahap Frontend Development, mencakup arsitektur Microfrontend, validasi input, kontrol sesi login tunggal lintas browser, keamanan frontend, hingga Definition of Done.
+description: Panduan lengkap dan terstruktur untuk tahap Frontend Development, mencakup Angular 17+ Standalone & Signals, React, Microfrontend, validasi input, kontrol sesi 1 tab lintas browser, hingga Definition of Done.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: Frontend Development & Microfrontend
@@ -146,6 +150,41 @@ Pendekatan ini memecah aplikasi monolitik frontend menjadi beberapa bagian indep
 
 ---
 
+## 9. Dukungan Multi-Bahasa UI (i18n & RTL: ID, EN, ZH, AR)
+
+Untuk memastikan tampilan antarmuka (UI) dapat berganti bahasa secara dinamis (*real-time*) mendukung 4 bahasa utama: **Bahasa Indonesia (ID)**, **Bahasa Inggris (EN)**, **Bahasa Mandarin/Cina (ZH - 简体中文)**, dan **Bahasa Arab (AR - العربية)**:
+
+### ⚠️ Aturan Pemisahan Teks vs Kode (Hanya Label UI yang Multi-Bahasa)
+*   **HANYA Label & Teks Tampilan Pengguna yang Diterjemahkan:** Judul halaman, label tombol, teks formulir, *placeholder*, teks *tooltip*, dan pesan notifikasi ke pengguna.
+*   **KODE TETAP 100% BAHASA INGGRIS STANDAR:** Seluruh nama variabel, fungsi, *class*, *interface*, *property*, *state*, *route* API, dan kunci kamus JSON (`"AUTH.LOGIN_TITLE"`) **wajib tetap dalam Bahasa Inggris standar pemrograman**. Dilarang menamai variabel atau properti kode dengan bahasa selain Bahasa Inggris.
+
+### Pemisahan Teks ke Kamus Bahasa (4 File JSON Dictionary)
+*   Dilarang keras meletakkan *hardcoded string* langsung pada template/komponen UI.
+*   Seluruh label dan teks tampilan disimpan dalam 4 file kamus terstruktur dengan kunci (*keys*) berbahasa Inggris:
+    *   `src/assets/i18n/id.json` — Kamus terjemahan Bahasa Indonesia.
+    *   `src/assets/i18n/en.json` — Kamus terjemahan Bahasa Inggris.
+    *   `src/assets/i18n/zh.json` — Kamus terjemahan Bahasa Mandarin / Cina (简体中文).
+    *   `src/assets/i18n/ar.json` — Kamus terjemahan Bahasa Arab (العربية).
+
+### Dukungan Arah Tata Letak RTL (Right-to-Left) untuk Bahasa Arab
+*   **Atribut `dir` Dinamis:** Saat pengguna memilih Bahasa Arab (`ar`), ubah atribut dokumen menjadi `document.documentElement.dir = 'rtl'` dan `lang = 'ar'`. Untuk bahasa lainnya (ID, EN, ZH), gunakan `dir = 'ltr'`.
+*   **CSS Logical Properties:** Gunakan properti CSS modern seperti `margin-inline-start`, `padding-inline-end`, dan `text-align: start` (hindari `left`/`right` kaku) agar posisi elemen otomatis menyesuaikan arah teks Arab secara sempurna.
+
+### Komponen Pengalih Bahasa (Language Switcher Component)
+*   Sediakan tombol pengalih (*dropdown* atau *toggle*) di bagian Navbar / Header utama dengan 4 indikator jelas:
+    *   `🇮🇩 ID` | `🇬🇧 EN` | `🇨🇳 ZH` | `🇸🇦 AR`
+*   **Penyimpanan Pilihan Pengguna:** Simpan bahasa yang dipilih di `localStorage` (contoh: `localStorage.setItem('app_lang', 'id')`) agar tidak hilang saat pengguna melakukan *refresh* atau membuka tab baru.
+*   **Deteksi Otomatis (Fallback):** Jika pengguna baru pertama kali berkunjung, gunakan bahasa browser (`navigator.language`) atau default ke `id`.
+
+### Sinkronisasi dengan Backend (HTTP Interceptor)
+*   Setiap kali frontend memanggil API backend, pasang **HTTP Interceptor** untuk otomatis menyematkan header bahasa aktif:
+    ```http
+    Accept-Language: id-ID, id;q=0.9, en;q=0.8, zh-CN;q=0.7, ar-SA;q=0.6
+    ```
+    sehingga pesan error dan notifikasi dari server otomatis dikembalikan dalam bahasa yang sama dengan tampilan UI.
+
+---
+
 ## ⚡ Command Cheat Sheet Lintas Framework
 
 ### React / Next.js / Vue / Svelte
@@ -176,14 +215,16 @@ Pendekatan ini memecah aplikasi monolitik frontend menjadi beberapa bagian indep
 ## ✅ Checklist & Definition of Done (DoD)
 
 *   **Kontrol Sesi & Validasi (Lintas Browser):**
-    *   [ ] Menerapkan pembatasan 1 tab aktif menggunakan `BroadcastChannel` dan *fallback* `localStorage` agar kompatibel di semua browser.
-    *   [ ] Memastikan sistem mendeteksi *login* baru di perangkat/browser lain untuk memutus sesi lama secara otomatis.
+    *   [ ] Pembatasan multi-tab aktif berjalan dengan benar menggunakan `BroadcastChannel` dan *fallback* `localStorage`.
+    *   [ ] Sesi 1 pengguna aktif terpasang dan otomatis melakukan *force logout* jika terdeteksi login di perangkat lain.
     *   [ ] Menerapkan validasi skema input menggunakan pustaka terstandar (Zod/Yup).
 *   **Modern Angular 17+ (Jika menggunakan Angular):**
     *   [ ] Menggunakan *Standalone Components* (`standalone: true`) tanpa `NgModule`.
     *   [ ] Menggunakan *Angular Signals* (`signal`, `computed`, `effect`) untuk reaktivitas state.
     *   [ ] Menggunakan *New Control Flow* (`@if`, `@for` dengan `track`, `@switch`) menggantikan structural directives.
     *   [ ] Menerapkan `@defer` untuk komponen berat yang dapat di-lazy load.
+*   **Dwi-Bahasa (i18n):**
+    *   [ ] Dwi-bahasa UI (Bahasa Indonesia & English) terpasang melalui kamus JSON dan komponen pengalih bahasa (*Language Switcher*).
 *   **State Management & Performa:**
     *   [ ] Menerapkan strategi *state management* yang sesuai kebutuhan aplikasi (Signals / Context API / Redux / Zustand / React Query).
     *   [ ] Memastikan tidak ada *prop drilling* berlebihan pada komponen bersarang dalam.

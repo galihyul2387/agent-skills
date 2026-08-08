@@ -1,23 +1,23 @@
 # 📚 Katalog Modul Skills — MyAgent
 
-Folder ini berisi 10 panduan skill modular yang memandu seluruh tahapan pengembangan perangkat lunak dari inisiasi hingga pemeliharaan pasca-rilis.
+[ 🇮🇩 Bahasa Indonesia ](README.md) | [ 🇬🇧 English ](README.en.md)
 
 ---
 
 ## 🗂️ Daftar Modul Skill (Urutan SDLC)
 
-| No | Modul | File Panduan | Deskripsi Ringkas | Contoh Konfigurasi |
+| No | Modul | Dokumen Panduan (ID / EN) | Deskripsi Ringkas | Contoh Konfigurasi |
 |:---:|:---|:---|:---|:---:|
-| **01** | **Planning & PRD** | [01-planning/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/01-planning/SKILL.md) | Ruang lingkup (Scoping), PRD, User Story, estimasi & mitigasi risiko awal | — |
-| **02** | **Git Workflow** | [02-git-workflow/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/SKILL.md) | Branching (Git Flow/Trunk-based), Conventional Commits, PR alur kerja, SemVer | [pull-request-template.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/examples/pull-request-template.md) |
-| **03** | **Frontend Development** | [03-frontend-development/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/03-frontend-development/SKILL.md) | Komponen UI modular, Single Session (BroadcastChannel), State Management, Aksesibilitas (WCAG 2.1) | — |
-| **04** | **Backend Development** | [04-backend-development/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/04-backend-development/SKILL.md) | Arsitektur Microservices, SonarQube A+, HTTP Security Headers, Anti-Bot, Error RFC 7807, Caching | — |
-| **05** | **Code Review & Standards** | [05-code-review-standards/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/SKILL.md) | Etika review, Clean Code (SOLID/DRY), Pre-commit hooks, Quality gates | [linter-config-examples.js](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/examples/linter-config-examples.js) |
-| **06** | **Integration** | [06-integration/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/06-integration/SKILL.md) | API Gateway, CORS strict, Correlation ID request tracing, mTLS internal, E2E contract testing | — |
-| **07** | **Testing & QA** | [07-testing/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/07-testing/SKILL.md) | Matriks uji SIT & UAT, Performance testing (k6), Security testing (OWASP ZAP), Automated regression | — |
-| **08** | **CI/CD Pipeline** | [08-cicd-pipeline/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/SKILL.md) | Pipeline stages (Lint → Test → Scan → Deploy), GitHub Actions / GitLab CI, Automated rollback | [ci-build-test.yml](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/examples/ci-build-test.yml) |
-| **09** | **Deployment & Docker** | [09-deploy/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/SKILL.md) | Multi-stage Dockerfile, Kubernetes manifests, Helm charts, Reverse Proxy (Nginx), Let's Encrypt | [Dockerfile.multistage.example](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/examples/Dockerfile.multistage.example) |
-| **10** | **Monitoring & Observability** | [10-monitoring-observability/SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/10-monitoring-observability/SKILL.md) | 3 Pilar Observabilitas (Metrics, Logs, Traces), Prometheus/Grafana, Alerting rules, Incident response | — |
+| **01** | **Planning & PRD** | [ID](01-planning/SKILL.md) \| [EN](01-planning/SKILL.en.md) | Ruang lingkup (Scoping), PRD, User Story, estimasi & mitigasi risiko awal | — |
+| **02** | **Git Workflow** | [ID](02-git-workflow/SKILL.md) \| [EN](02-git-workflow/SKILL.en.md) | Branching (Git Flow/Trunk-based), Conventional Commits, PR alur kerja, SemVer, Rich Tags | [pull-request-template.md](02-git-workflow/examples/pull-request-template.md) |
+| **03** | **Frontend Development** | [ID](03-frontend-development/SKILL.md) \| [EN](03-frontend-development/SKILL.en.md) | Angular 17+ (Signals/Standalone), React, Single Session (BroadcastChannel), Aksesibilitas | — |
+| **04** | **Backend Development** | [ID](04-backend-development/SKILL.md) \| [EN](04-backend-development/SKILL.en.md) | Microservices polyglot, .NET 10 LTS Native AOT, SonarQube A+, Security Headers, Caching | — |
+| **05** | **Code Review & Standards** | [ID](05-code-review-standards/SKILL.md) \| [EN](05-code-review-standards/SKILL.en.md) | Etika review, Clean Code (SOLID/DRY), Pre-commit hooks, Quality gates | [linter-config-examples.js](05-code-review-standards/examples/linter-config-examples.js) |
+| **06** | **Integration** | [ID](06-integration/SKILL.md) \| [EN](06-integration/SKILL.en.md) | API Gateway, CORS strict, Correlation ID request tracing, mTLS internal, E2E contract | — |
+| **07** | **Testing & QA** | [ID](07-testing/SKILL.md) \| [EN](07-testing/SKILL.en.md) | Matriks uji SIT & UAT, Performance testing (k6), Security testing (OWASP ZAP), Regresi | — |
+| **08** | **CI/CD Pipeline** | [ID](08-cicd-pipeline/SKILL.md) \| [EN](08-cicd-pipeline/SKILL.en.md) | Pipeline stages (Lint ➔ Test ➔ Scan ➔ Deploy), GitHub Actions / GitLab CI, Auto-rollback | [ci-build-test.yml](08-cicd-pipeline/examples/ci-build-test.yml) |
+| **09** | **Deployment & Docker** | [ID](09-deploy/SKILL.md) \| [EN](09-deploy/SKILL.en.md) | Multi-stage Dockerfile, Kubernetes manifests, Helm charts, Reverse Proxy, SSL/TLS | [Dockerfile.multistage.example](09-deploy/examples/Dockerfile.multistage.example) |
+| **10** | **Monitoring & Observability** | [ID](10-monitoring-observability/SKILL.md) \| [EN](10-monitoring-observability/SKILL.en.md) | 3 Pilar Observabilitas (Metrics, Logs, Traces), Prometheus/Grafana, Alerting, Incident | — |
 
 ---
 

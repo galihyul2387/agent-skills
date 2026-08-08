@@ -3,6 +3,10 @@ name: monitoring-observability-best-practices
 description: Panduan setup monitoring, alerting, logging produksi, dan observability mencakup Prometheus, Grafana, health checks, APM, dan incident response.
 ---
 
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
+---
+
 # Panduan Tahap: Monitoring & Observability (Operasional Pasca-Deploy)
 
 Tahap ini berfokus pada pemantauan (*monitoring*), pengamatan (*observability*), dan kesiapan respons insiden terhadap aplikasi yang sudah berjalan di lingkungan produksi, guna memastikan stabilitas, performa optimal, dan deteksi dini terhadap anomali atau kegagalan sistem.

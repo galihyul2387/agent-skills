@@ -3,6 +3,10 @@ name: planning-prd-best-practices
 description: Panduan terstruktur untuk tahap Planning dan penyusunan PRD (Product Requirements Document) sesuai best practice pengembangan perangkat lunak dan keamanan awal.
 ---
 
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
+---
+
 # Panduan Tahap: Planning & PRD
 
 Tujuan dari tahap ini adalah menyusun fondasi proyek yang jelas, terstruktur, dan terukur sebelum masuk ke tahap desain atau penulisan kode (*coding*).

@@ -1,6 +1,10 @@
 ---
-name: final-testing-qa-complete-best-practices
-description: Panduan lengkap dan terstruktur untuk tahap Final Testing & Quality Assurance, mencakup perencanaan skenario uji, pelaksanaan SIT dan UAT, manajemen dokumen pengujian formal, otomatisasi dokumen berbasis AI & CI/CD, hingga Definition of Done.
+name: testing-qa-complete-best-practices
+description: Panduan pengujian menyeluruh (SIT, UAT, load testing k6, OWASP ZAP security scan, regresi otomatis) dan otomatisasi dokumen pengujian.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: Final Testing, SIT, UAT, Document Automation & Quality Assurance

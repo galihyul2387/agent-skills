@@ -1,8 +1,14 @@
+# 🤖 MyAgent — Knowledge Base & Panduan SDLC Modern
+
+[ 🇮🇩 Bahasa Indonesia ](README.md) | [ 🇬🇧 English ](README.en.md)
+
+---
+
 [![Language Support](https://img.shields.io/badge/Stack-Polyglot%20%7C%20Multi--Language-blueviolet.svg)](#-dukungan-multi-bahasa-pemrograman-polyglot)
 [![Quality Gate](https://img.shields.io/badge/Quality%20Gate-SonarQube%20A%2B-brightgreen.svg)](#-standar-kualitas--aturan-global)
 [![Security](https://img.shields.io/badge/Security-DevSecOps%20Ready-orange.svg)](#-keamanan--best-practices)
 [![Consistency](https://img.shields.io/badge/Structure-100%25%20Consistent-success.svg)](#-katalog-10-modul-skill-sdlc)
-[![Language](https://img.shields.io/badge/Docs-Bahasa%20Indonesia-red.svg)](#-bahasa--konvensi)
+[![Documentation](https://img.shields.io/badge/Docs-Bilingual%20(ID%20%7C%20EN)-blue.svg)](#-bahasa--konvensi-language-selection)
 
 > **MyAgent** adalah repositori standar operasional prosedur (*Standard Operating Procedures* / SOP), pedoman teknis (*best practices*), dan panduan skill terstruktur yang dirancang khusus untuk **AI Coding Assistant** (seperti Cursor, Claude Code, Copilot, Codex) dan **Tim Pengembang Perangkat Lunak** guna menjalankan seluruh siklus hidup pengembangan sistem (*Software Development Life Cycle* / SDLC) berbasis **DevSecOps** di **seluruh bahasa pemrograman**.
 
@@ -68,18 +74,18 @@ flowchart LR
 
 Setiap modul dilengkapi dengan panduan strategis, cheat sheet perintah, panduan troubleshooting, konvensi penamaan, checklist *Definition of Done* (DoD), serta contoh file konfigurasi siap pakai:
 
-| # | Modul Skill | Dokumen Panduan | Deskripsi & Cakupan Utama | Contoh Siap Pakai |
+| # | Modul Skill | Dokumen Panduan (ID / EN) | Deskripsi & Cakupan Utama | Contoh Siap Pakai |
 |:---:|:---|:---|:---|:---:|
-| **01** | **Planning & PRD** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/01-planning/SKILL.md) | Ruang lingkup (Scoping), PRD, User Story, estimasi waktu, analisis keamanan awal. | — |
-| **02** | **Git Workflow** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/SKILL.md) | Branching strategy (Git Flow/Trunk-based), Conventional Commits, PR workflow, SemVer. | [PR Template](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/examples/pull-request-template.md) |
-| **03** | **Frontend Development** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/03-frontend-development/SKILL.md) | Komponen modular, Single Session (BroadcastChannel), State Management, a11y (WCAG 2.1), Microfrontend. | — |
-| **04** | **Backend Development** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/04-backend-development/SKILL.md) | Microservices, SonarQube A+, HTTP Security Headers, Anti-bot mitigation, RFC 7807 Error, Redis Caching. | — |
-| **05** | **Code Review & Standards** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/SKILL.md) | Etika review, Clean Code (SOLID/DRY/KISS), Pre-commit hooks, Linter & Formatter gates. | [Linter Config](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/examples/linter-config-examples.js) |
-| **06** | **Integration** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/06-integration/SKILL.md) | API Gateway, CORS strict policy, Correlation ID Tracing, mTLS antar layanan, E2E contract test. | — |
-| **07** | **Testing & QA** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/07-testing/SKILL.md) | SIT & UAT test matrix, Performance Testing (k6), Security Testing (OWASP ZAP), Automated regression. | — |
-| **08** | **CI/CD Pipeline** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/SKILL.md) | Pipeline stages (Lint → Test → Scan → Deploy), GitHub Actions/GitLab CI, Automated rollback. | [GitHub CI](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/examples/ci-build-test.yml) |
-| **09** | **Deployment & Docker** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/SKILL.md) | Multi-stage Dockerfile, Kubernetes manifests, Helm charts, Reverse Proxy (Nginx), Let's Encrypt SSL. | [Dockerfile](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/examples/Dockerfile.multistage.example) |
-| **10** | **Monitoring & Observability** | [SKILL.md](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/10-monitoring-observability/SKILL.md) | 3 Pilar Observabilitas (Metrics, Logs, Traces), Prometheus/Grafana, Alerting rules, Post-mortem. | — |
+| **01** | **Planning & PRD** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/01-planning/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/01-planning/SKILL.en.md) | Ruang lingkup (Scoping), PRD, User Story, estimasi waktu, analisis keamanan awal. | — |
+| **02** | **Git Workflow** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/SKILL.en.md) | Branching strategy (Git Flow/Trunk-based), Conventional Commits, PR workflow, Rich Tags. | [PR Template](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/02-git-workflow/examples/pull-request-template.md) |
+| **03** | **Frontend Development** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/03-frontend-development/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/03-frontend-development/SKILL.en.md) | Angular 17+ (Signals/Standalone), React, BroadcastChannel session control, WCAG 2.1 a11y. | — |
+| **04** | **Backend Development** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/04-backend-development/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/04-backend-development/SKILL.en.md) | Microservices polyglot, .NET 10 LTS Native AOT, HTTP Security Headers, RFC 7807 Error, Caching. | — |
+| **05** | **Code Review & Standards** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/SKILL.en.md) | Etika review, Clean Code (SOLID/DRY), Pre-commit hooks, Linter multi-bahasa. | [Linter Config](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/05-code-review-standards/examples/linter-config-examples.js) |
+| **06** | **Integration** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/06-integration/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/06-integration/SKILL.en.md) | API Gateway, CORS strict, Correlation ID Tracing, mTLS internal, E2E contract test. | — |
+| **07** | **Testing & QA** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/07-testing/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/07-testing/SKILL.en.md) | SIT & UAT matrix, Performance Testing (k6), Security Testing (OWASP ZAP), Automated regression. | — |
+| **08** | **CI/CD Pipeline** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/SKILL.en.md) | Pipeline stages (Lint ➔ Test ➔ Scan ➔ Deploy), GitHub Actions / GitLab CI, Auto-rollback. | [GitHub CI](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/08-cicd-pipeline/examples/ci-build-test.yml) |
+| **09** | **Deployment & Docker** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/SKILL.en.md) | Multi-stage Dockerfiles, Kubernetes manifests, Helm, Nginx Reverse Proxy, Let's Encrypt. | [Dockerfile](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/09-deploy/examples/Dockerfile.multistage.example) |
+| **10** | **Monitoring & Observability** | [ID](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/10-monitoring-observability/SKILL.md) \| [EN](file:///c:/Users/galih.pranoto/Data/Galih/MyAgent/skills/10-monitoring-observability/SKILL.en.md) | 3 Pilar Observabilitas (Metrics, Logs, Traces), Prometheus/Grafana, Alerting rules, Post-mortem. | — |
 
 ---
 

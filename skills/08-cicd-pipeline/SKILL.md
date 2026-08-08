@@ -1,6 +1,10 @@
 ---
-name: cicd-pipeline-best-practices
-description: Panduan konfigurasi CI/CD Pipeline mencakup GitHub Actions, automated testing, build automation, deployment stages, dan rollback strategy.
+name: cicd-pipeline-automation-best-practices
+description: Panduan pembuatan dan optimasi CI/CD pipeline, automated testing gates, security scanning, dependency caching, dan automated deployment.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: CI/CD Pipeline (Continuous Integration & Continuous Deployment)

@@ -1,6 +1,10 @@
 ---
 name: code-review-standards-best-practices
-description: Panduan code review, coding standards, documentation standards, dan quality gates untuk menjaga kualitas kode tim secara konsisten.
+description: Panduan code review, coding standards polyglot, documentation standards, dan automated quality gates untuk menjaga mutu kode tim secara konsisten.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: Code Review & Standards

@@ -1,6 +1,10 @@
 ---
-name: integration-complete-best-practices
-description: Panduan lengkap dan terstruktur untuk tahap Integration, mencakup integrasi Frontend dan Backend (Microservices), manajemen logging terpusat & request tracing, API contract testing, manajemen CORS, keamanan tingkat lanjut, optimalisasi performa, hingga Definition of Done.
+name: complete-integration-best-practices
+description: Panduan integrasi menyeluruh mencakup API Gateway, CORS strict, Correlation ID request tracing, mTLS antar layanan, dan E2E contract testing.
+---
+
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+
 ---
 
 # Panduan Tahap: Integration (Frontend, Backend, Logging, Performance, Security & Best Practices)
