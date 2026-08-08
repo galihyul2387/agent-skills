@@ -1,6 +1,6 @@
 # 🤖 MyAgent — Modern SDLC & DevSecOps Knowledge Base
 
-[ 🇮🇩 Bahasa Indonesia ](README.md) | [ 🇬🇧 English ](README.en.md)
+[ 🇮🇩 Bahasa Indonesia ](README.md) | [ 🇬🇧 English ](README.en.md) | [ 🇨🇳 简体中文 ](README.zh.md) | [ 🇸🇦 العربية ](README.ar.md)
 
 ---
 
