@@ -95,9 +95,56 @@ MAJOR.MINOR.PATCH
 *   **MINOR** (`v1.1.0`): Penambahan fitur baru yang *backward-compatible*.
 *   **PATCH** (`v1.0.1`): Perbaikan bug tanpa perubahan fitur.
 
-### Git Tags & Release Notes
-*   **Annotated Tags:** Gunakan *annotated tags* untuk menandai setiap versi rilis (`git tag -a v1.2.0 -m "Release v1.2.0"`).
-*   **Release Notes:** Dokumentasikan perubahan di setiap rilis menggunakan **CHANGELOG.md** atau fitur *GitHub Releases* — dihasilkan secara otomatis dari *Conventional Commits* jika memungkinkan.
+### Git Tags & Rich Release Notes (Format Penulisan Pesan Tag)
+Selalu gunakan **Annotated Tag** dengan pesan multi-baris (*multi-line message*) yang merinci seluruh daftar penambahan dan perubahan, mengikuti format standar **Keep a Changelog**:
+
+#### Struktur Format Pesan Tag:
+```
+release(vX.Y.Z): <ringkasan singkat rilis>
+
+### 🆕 Added
+- <Daftar fitur, modul, atau dependensi baru yang ditambahkan>
+
+### 🔄 Changed
+- <Daftar perubahan, refactoring, atau peningkatan performa>
+
+### 🐛 Fixed
+- <Daftar perbaikan bug dan penanganan masalah teknis>
+
+### 🔐 Security
+- <Pembaruan dependensi atau perbaikan celah keamanan>
+
+### ⚠️ Breaking Changes (jika ada)
+- <Perubahan yang tidak kompatibel dengan versi sebelumnya>
+```
+
+#### Contoh Perintah Pembuatan Tag Berisi Rincian:
+```bash
+# Opsi 1: Multi-line tag langsung di terminal
+git tag -a v1.3.0 -m "release(v1.3.0): support Angular 17+ and .NET 10 LTS
+
+### 🆕 Added
+- Angular 17+ Standalone Components, Signals, and Control Flow
+- .NET 10 Minimal APIs, Native AOT, and EF Core 10
+- Multi-language linter and testing commands
+
+### 🔄 Changed
+- Updated base container images to .NET 10 Chiseled
+- Standardized universal coding conventions in AGENTS.md
+
+### 🐛 Fixed
+- Fixed section numbering across all skill documents"
+
+# Opsi 2: Menggunakan file catatan rilis
+git tag -a v1.3.0 -F RELEASE_NOTES.md
+
+# Memeriksa detail isi pesan tag:
+git show v1.3.0
+git tag -n99 -l v1.3.0
+
+# Push tag ke remote repository:
+git push origin v1.3.0
+```
 
 ---
 
