@@ -1,6 +1,6 @@
 # Global Rules — MyAgent Workspace (Polyglot / Multi-Language)
 
-[ 🇮🇩 Bahasa Indonesia ](AGENTS.md) | [ 🇬🇧 English ](AGENTS.en.md)
+[ 🇮🇩 Bahasa Indonesia ](AGENTS.md) | [ 🇬🇧 English ](AGENTS.en.md) | [ 🇨🇳 简体中文 ](AGENTS.zh.md) | [ 🇸🇦 العربية ](AGENTS.ar.md)
 
 ---
 
