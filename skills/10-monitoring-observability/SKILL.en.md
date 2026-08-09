@@ -1,9 +1,9 @@
 ---
 name: monitoring-observability-best-practices
-description: Comprehensive production monitoring, observability, centralized logging, distributed tracing, alerting, and incident response management guide.
+description: Comprehensive Observability guide covering Metrics (Prometheus), Distributed Tracing (OpenTelemetry/Jaeger), Centralized Logging (Loki/ELK), Grafana Dashboards, and Incident Response.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

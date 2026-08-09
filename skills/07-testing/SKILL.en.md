@@ -3,7 +3,7 @@ name: testing-qa-complete-best-practices
 description: Comprehensive testing and QA guide covering SIT, UAT, k6 performance load testing, OWASP ZAP security scanning, and automated test documentation.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

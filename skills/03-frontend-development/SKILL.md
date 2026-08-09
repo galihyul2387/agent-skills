@@ -1,9 +1,9 @@
 ---
 name: frontend-complete-development-best-practices
-description: Panduan lengkap dan terstruktur untuk tahap Frontend Development, mencakup Angular 17+ Standalone & Signals, React, Microfrontend, validasi input, kontrol sesi 1 tab lintas browser, hingga Definition of Done.
+description: Panduan lengkap Frontend Development mencakup Desain Responsif (Mobile-First RWD), Angular 17+ Standalone & Signals, React, i18n 4 bahasa (RTL Arab), kontrol sesi 1 tab, hingga Definition of Done.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 
@@ -185,6 +185,53 @@ Untuk memastikan tampilan antarmuka (UI) dapat berganti bahasa secara dinamis (*
 
 ---
 
+## 10. Standar Desain Web Responsif (Responsive Web Design / RWD)
+
+Aplikasi wajib dirancang dan dibangun agar tampil proporsional, nyaman digunakan, dan bebas dari *horizontal scrollbar* di seluruh dimensi layar:
+
+### Pendekatan Mobile-First
+*   **Mobile-First Coding:** Bangun tata letak untuk layar kecil (*smartphone*) terlebih dahulu sebagai fondasi default, kemudian tambahkan aturan gaya untuk layar lebih besar menggunakan *media query* `min-width` (misal: Tailwind CSS `sm:`, `md:`, `lg:`, `xl:`, `2xl:`).
+*   **Viewport Tag Wajib:** Pastikan tag meta viewport terpasang di `index.html`:
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    ```
+
+### Standar Breakpoints Industri
+
+| Breakpoint | Target Resolusi | Perangkat | Pola Tata Letak |
+|:---:|:---:|:---|:---|
+| **Mobile (`< 640px`)** | `320px - 639px` | Smartphone portrait & landscape | 1 Kolom penuh, menu Hamburger / Bottom Navigation, drawer modal. |
+| **Tablet (`md: 768px`)**| `640px - 1023px`| iPad, Tablet, perangkat layar lipat | 2 Kolom grid, sidebar collapsible / off-canvas. |
+| **Desktop (`lg: 1024px`)**| `1024px - 1439px`| Laptop, PC Desktop standar | Multi-kolom (3-4 grid), fixed sidebar navigasi, split view. |
+| **Large Screen (`2xl: 1536px`)**| `≥ 1440px` | Monitor Ultra-wide, 4K Display | Container terpusat (*max-width container*) untuk mencegah elemen terlalu renggang. |
+
+### Tata Letak Fluida (Modern Fluid Layouts)
+*   **CSS Grid Otomatis (Auto-fit/Auto-fill):** Gunakan pola kartu responsif tanpa perlu media query kaku:
+    ```css
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    ```
+*   **Flexbox dengan `flex-wrap` dan `gap`:** Pastikan barisan tombol dan navigasi otomatis turun ke baris berikutnya (*wrap*) saat ruang menyempit.
+*   **Tipografi Fluida (`clamp()`):** Skalakan ukuran teks dan *spacing* secara mulus mengikuti lebar layar:
+    ```css
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1rem, 3vw, 2.5rem);
+    ```
+
+### Media & Gambar Responsif
+*   **Fluid Images:** Selalu terapkan `max-width: 100%; height: auto;` pada elemen `<img>` dan `<video>` untuk mencegah konten meluap (*overflow*).
+*   **Pencegahan Layout Shift (CLS):** Tentukan `aspect-ratio` atau atribut `width` dan `height` eksplisit pada seluruh aset gambar.
+*   **Elemen `<picture>`:** Sediakan resolusi gambar berbeda berdasarkan resolusi layar untuk menghemat bandwidth pengguna mobile.
+
+### Ergonomi Sentuh & Notches Layar (Touch & Mobile Ergonomics)
+*   **Target Sentuh Minimal 44-48px:** Seluruh tombol dan area klik pada perangkat mobile wajib memiliki ukuran minimal **44 × 44 px** (standar Apple HIG / Android Material Design) dengan jarak renggang yang cukup untuk mencegah salah tekan.
+*   **Dukungan Safe Area Insets:** Tangani lekukan kamera (*notch*) dan gestur navigasi bawah pada perangkat modern (iPhone/Android):
+    ```css
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    ```
+
+---
+
 ## ⚡ Command Cheat Sheet Lintas Framework
 
 ### React / Next.js / Vue / Svelte
@@ -223,16 +270,17 @@ Untuk memastikan tampilan antarmuka (UI) dapat berganti bahasa secara dinamis (*
     *   [ ] Menggunakan *Angular Signals* (`signal`, `computed`, `effect`) untuk reaktivitas state.
     *   [ ] Menggunakan *New Control Flow* (`@if`, `@for` dengan `track`, `@switch`) menggantikan structural directives.
     *   [ ] Menerapkan `@defer` untuk komponen berat yang dapat di-lazy load.
-*   **Dwi-Bahasa (i18n):**
-    *   [ ] Dwi-bahasa UI (Bahasa Indonesia & English) terpasang melalui kamus JSON dan komponen pengalih bahasa (*Language Switcher*).
+*   **Dukungan 4 Bahasa UI (i18n & RTL):**
+    *   [ ] Dukungan 4 Bahasa UI (ID, EN, ZH, AR dengan tata letak RTL) terpasang melalui kamus JSON dan komponen pengalih bahasa (*Language Switcher*).
 *   **State Management & Performa:**
     *   [ ] Menerapkan strategi *state management* yang sesuai kebutuhan aplikasi (Signals / Context API / Redux / Zustand / React Query).
     *   [ ] Memastikan tidak ada *prop drilling* berlebihan pada komponen bersarang dalam.
-*   **Implementasi UI/UX & AI:**
-    *   [ ] Menyusun komponen UI yang modular dan *reusable*.
-    *   [ ] Memastikan desain responsif di berbagai ukuran perangkat.
-    *   [ ] Memanfaatkan *AI Pair Programming* dan melakukan *refactoring* kode hasil AI.
-*   **Aksesibilitas (a11y):**
+*   **Desain Responsif (RWD) & Aksesibilitas:**
+    *   [ ] Menggunakan pendekatan *Mobile-First* dengan breakpoint standar (`sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`).
+    *   [ ] Bebas dari *horizontal scrolling* yang tidak disengaja pada semua resolusi (320px hingga 4K).
+    *   [ ] Menggunakan tipografi fluida (`clamp()`) atau skala ukuran responsif proporsional.
+    *   [ ] Target sentuh tombol dan elemen interaktif minimal **44 × 44 px** pada perangkat layar sentuh.
+    *   [ ] Seluruh gambar menerapkan `max-width: 100%` dan `aspect-ratio` untuk mencegah pergeseran tata letak (CLS).
     *   [ ] Menerapkan *Semantic HTML* dan atribut ARIA pada elemen interaktif.
     *   [ ] Memastikan navigasi keyboard berfungsi pada seluruh fitur utama.
     *   [ ] Menjalankan audit aksesibilitas (Lighthouse / axe-core) dengan skor minimal 90.

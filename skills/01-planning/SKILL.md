@@ -1,9 +1,9 @@
 ---
 name: planning-prd-best-practices
-description: Panduan terstruktur untuk tahap Planning dan penyusunan PRD (Product Requirements Document) sesuai best practice pengembangan perangkat lunak dan keamanan awal.
+description: Panduan terstruktur untuk tahap Planning dan penyusunan PRD (Product Requirements Document), mencakup perencanaan 4 bahasa UI (ID, EN, ZH, AR), kontrol sesi 1 tab, hingga Definition of Done.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 
@@ -17,8 +17,9 @@ Tujuan dari tahap ini adalah menyusun fondasi proyek yang jelas, terstruktur, da
 *   Tentukan fitur utama (*core features*) yang wajib ada pada rilis pertama (MVP - *Minimum Viable Product*).
 *   Batasi fitur sekunder untuk dikerjakan pada tahap selanjutnya guna menghindari *scope creep*.
 
-### 2. User Story & Use Cases (Termasuk Kebijakan Sesi & Bahasa Dokumen)
+### 2. User Story, Kebijakan Sesi & Perencanaan 4 Bahasa (i18n & RTL)
 *   **Pilihan Bahasa Dokumen PRD:** Dokumen PRD dan *User Stories* dapat disusun dalam **Bahasa Indonesia** atau **English** sesuai target pembaca / stakeholders proyek.
+*   **Perencanaan Dukungan 4 Bahasa UI (i18n & RTL):** Rencanakan antarmuka pengguna (UI) untuk mendukung 4 bahasa: **🇮🇩 Bahasa Indonesia (ID)**, **🇬🇧 English (EN)**, **🇨🇳 Mandarin / Cina (ZH)**, dan **🇸🇦 Arab (AR - dengan tata letak RTL / Right-to-Left)**. Pisahkan teks label UI ke dalam 4 kamus JSON (`id.json`, `en.json`, `zh.json`, `ar.json`) dan tetapkan bahwa seluruh kode pemrograman tetap 100% menggunakan Bahasa Inggris standar.
 *   **Petakan Pengguna & Alur Kerja:** Petakan siapa pengguna aplikasi (*user persona*) dan skenario interaksi sistem (contoh: alur login, alur transaksi).
 *   **Definisi Kebijakan Sesi:** Rencanakan aturan bahwa setiap akun hanya diizinkan aktif di **1 perangkat/browser** dalam satu waktu dan membatasi penggunaan secara bersamaan di banyak tab (*Single Session & Tab Concurrency Control*).
 

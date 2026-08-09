@@ -3,7 +3,7 @@ name: deployment-docker-best-practices
 description: Complete containerization & deployment guide covering multi-stage Dockerfiles, Kubernetes manifests, Helm charts, Nginx reverse proxy, and Let's Encrypt SSL/TLS.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

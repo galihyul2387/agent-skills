@@ -3,7 +3,7 @@ name: code-review-standards-best-practices
 description: Panduan code review, coding standards polyglot, documentation standards, dan automated quality gates untuk menjaga mutu kode tim secara konsisten.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

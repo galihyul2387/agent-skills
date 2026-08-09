@@ -3,7 +3,7 @@ name: complete-integration-best-practices
 description: Comprehensive integration guide covering API Gateway routing, strict CORS policies, Correlation ID distributed request tracing, internal mTLS, and E2E contract testing.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

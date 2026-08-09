@@ -74,18 +74,18 @@ flowchart LR
 
 每个模块均包含操作策略、命令速查表、故障排查、命名规范、完成定义 (DoD) 清单以及即开即用的示例配置：
 
-| # | 技能模块 | 指南文档 (ID / EN) | 核心范围与描述 | 现成示例 |
+| # | 技能模块 | 技能指南 (4 种语言) | 核心范围与描述 | 现成示例 |
 |:---:|:---|:---|:---|:---:|
-| **01** | **需求规划 (PRD)** | [ID](skills/01-planning/SKILL.md) \| [EN](skills/01-planning/SKILL.en.md) | 范围界定 (Scoping)、PRD、用户故事、工期估算、设计初期的安全防护。 | — |
-| **02** | **Git 工作流** | [ID](skills/02-git-workflow/SKILL.md) \| [EN](skills/02-git-workflow/SKILL.en.md) | 分支策略 (Git Flow / Trunk-based)、约定式提交、PR 流程、语义化版本与丰富标签。 | [PR 模板](skills/02-git-workflow/examples/pull-request-template.md) |
-| **03** | **前端开发** | [ID](skills/03-frontend-development/SKILL.md) \| [EN](skills/03-frontend-development/SKILL.en.md) | Angular 17+ (Signals/独立组件)、React、BroadcastChannel 会话控制、WCAG 2.1 无障碍。 | — |
-| **04** | **后端开发** | [ID](skills/04-backend-development/SKILL.md) \| [EN](skills/04-backend-development/SKILL.en.md) | 多语言微服务、.NET 10 LTS Native AOT、HTTP 安全标头、RFC 7807 错误规范、Redis 缓存。 | — |
-| **05** | **代码审查与标准** | [ID](skills/05-code-review-standards/SKILL.md) \| [EN](skills/05-code-review-standards/SKILL.en.md) | 审查礼仪、整洁代码 (SOLID/DRY)、Pre-commit 钩子 (Husky)、多语言代码检查门禁。 | [Linter 配置](skills/05-code-review-standards/examples/linter-config-examples.js) |
-| **06** | **系统集成** | [ID](skills/06-integration/SKILL.md) \| [EN](skills/06-integration/SKILL.en.md) | API 网关路由、严格 CORS、Correlation ID 链路追踪、内部 mTLS 加密、端到端契约测试。 | — |
-| **07** | **测试与质量保证** | [ID](skills/07-testing/SKILL.md) \| [EN](skills/07-testing/SKILL.en.md) | SIT 与 UAT 测试矩阵、k6 性能压测、OWASP ZAP 安全扫描、自动化回归测试。 | — |
-| **08** | **CI/CD 流水线** | [ID](skills/08-cicd-pipeline/SKILL.md) \| [EN](skills/08-cicd-pipeline/SKILL.en.md) | 流水线阶段 (Lint ➔ Test ➔ Scan ➔ Deploy)、GitHub Actions / GitLab CI、自动回滚。 | [GitHub CI](skills/08-cicd-pipeline/examples/ci-build-test.yml) |
-| **09** | **容器部署与 Docker** | [ID](skills/09-deploy/SKILL.md) \| [EN](skills/09-deploy/SKILL.en.md) | 多阶段 Dockerfile、Kubernetes 清单、Helm 部署、Nginx 反向代理、Let's Encrypt SSL。 | [Dockerfile](skills/09-deploy/examples/Dockerfile.multistage.example) |
-| **10** | **监控与可观测性** | [ID](skills/10-monitoring-observability/SKILL.md) \| [EN](skills/10-monitoring-observability/SKILL.en.md) | 3 大可观测性支柱 (Metrics, Logs, Traces)、Prometheus/Grafana 仪表盘、告警策略。 | — |
+| **01** | **需求规划 (PRD)** | [ID](skills/01-planning/SKILL.md) \| [EN](skills/01-planning/SKILL.en.md) \| [ZH](skills/01-planning/SKILL.zh.md) \| [AR](skills/01-planning/SKILL.ar.md) | 范围界定 (Scoping)、PRD、用户故事、工期估算、设计初期的安全防护。 | — |
+| **02** | **Git 工作流** | [ID](skills/02-git-workflow/SKILL.md) \| [EN](skills/02-git-workflow/SKILL.en.md) \| [ZH](skills/02-git-workflow/SKILL.zh.md) \| [AR](skills/02-git-workflow/SKILL.ar.md) | 分支策略 (Git Flow / Trunk-based)、约定式提交、PR 流程、语义化版本与丰富标签。 | [PR 模板](skills/02-git-workflow/examples/pull-request-template.md) |
+| **03** | **前端开发** | [ID](skills/03-frontend-development/SKILL.md) \| [EN](skills/03-frontend-development/SKILL.en.md) \| [ZH](skills/03-frontend-development/SKILL.zh.md) \| [AR](skills/03-frontend-development/SKILL.ar.md) | 响应式设计 (Mobile-First RWD)、Angular 17+ (Signals)、React、4 语言界面 (阿拉伯 RTL)、单会话控制。 | — |
+| **04** | **后端开发** | [ID](skills/04-backend-development/SKILL.md) \| [EN](skills/04-backend-development/SKILL.en.md) \| [ZH](skills/04-backend-development/SKILL.zh.md) \| [AR](skills/04-backend-development/SKILL.ar.md) | 多语言微服务、.NET 10 LTS Native AOT、HTTP 安全标头、RFC 7807 错误规范、Redis 缓存。 | — |
+| **05** | **代码审查与标准** | [ID](skills/05-code-review-standards/SKILL.md) \| [EN](skills/05-code-review-standards/SKILL.en.md) \| [ZH](skills/05-code-review-standards/SKILL.zh.md) \| [AR](skills/05-code-review-standards/SKILL.ar.md) | 审查礼仪、整洁代码 (SOLID/DRY)、Pre-commit 钩子 (Husky)、多语言代码检查门禁。 | [Linter 配置](skills/05-code-review-standards/examples/linter-config-examples.js) |
+| **06** | **系统集成** | [ID](skills/06-integration/SKILL.md) \| [EN](skills/06-integration/SKILL.en.md) \| [ZH](skills/06-integration/SKILL.zh.md) \| [AR](skills/06-integration/SKILL.ar.md) | API 网关路由、严格 CORS、Correlation ID 链路追踪、内部 mTLS 加密、端到端契约测试。 | — |
+| **07** | **测试与质量保证** | [ID](skills/07-testing/SKILL.md) \| [EN](skills/07-testing/SKILL.en.md) \| [ZH](skills/07-testing/SKILL.zh.md) \| [AR](skills/07-testing/SKILL.ar.md) | SIT 与 UAT 测试矩阵、k6 性能压测、OWASP ZAP 安全扫描、自动化回归测试。 | — |
+| **08** | **CI/CD 流水线** | [ID](skills/08-cicd-pipeline/SKILL.md) \| [EN](skills/08-cicd-pipeline/SKILL.en.md) \| [ZH](skills/08-cicd-pipeline/SKILL.zh.md) \| [AR](skills/08-cicd-pipeline/SKILL.ar.md) | 流水线阶段 (Lint ➔ Test ➔ Scan ➔ Deploy)、GitHub Actions / GitLab CI、自动回滚。 | [GitHub CI](skills/08-cicd-pipeline/examples/ci-build-test.yml) |
+| **09** | **容器部署与 Docker** | [ID](skills/09-deploy/SKILL.md) \| [EN](skills/09-deploy/SKILL.en.md) \| [ZH](skills/09-deploy/SKILL.zh.md) \| [AR](skills/09-deploy/SKILL.ar.md) | 多阶段 Dockerfile、Kubernetes 清单、Helm 部署、Nginx 反向代理、Let's Encrypt SSL。 | [Dockerfile](skills/09-deploy/examples/Dockerfile.multistage.example) |
+| **10** | **监控与可观测性** | [ID](skills/10-monitoring-observability/SKILL.md) \| [EN](skills/10-monitoring-observability/SKILL.en.md) \| [ZH](skills/10-monitoring-observability/SKILL.zh.md) \| [AR](skills/10-monitoring-observability/SKILL.ar.md) | 3 大可观测性支柱 (Metrics, Logs, Traces)、Prometheus/Grafana 仪表盘、告警策略。 | — |
 
 ---
 

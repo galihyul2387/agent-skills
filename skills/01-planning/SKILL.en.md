@@ -1,9 +1,9 @@
 ---
 name: planning-prd-best-practices
-description: Structured guide for project planning, PRD authoring, user stories, scoping, and security-by-design baseline standards.
+description: Structured guide for project planning, PRD authoring, 4-language UI planning (ID, EN, ZH, AR with RTL), scoping, single-session control, and security-by-design standards.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 
@@ -17,8 +17,9 @@ The objective of this phase is to establish a clear, structured, and measurable 
 *   Define core features that are mandatory for the Minimum Viable Product (MVP).
 *   Defer secondary features to subsequent milestones to prevent *scope creep*.
 
-### 2. User Stories & Use Cases (Including Session Policies & Language Selection)
+### 2. User Stories, Session Policy & 4-Language UI Planning (i18n & RTL)
 *   **PRD Language Selection:** Technical PRDs and User Stories can be authored in **Bahasa Indonesia** or **English** based on team/stakeholder preferences.
+*   **4-Language UI Planning (i18n & RTL):** Plan the user interface to natively support 4 major languages: **🇮🇩 Bahasa Indonesia (ID)**, **🇬🇧 English (EN)**, **🇨🇳 Mandarin Chinese (ZH)**, and **🇸🇦 Arabic (AR with RTL layout)**. Separate all UI display labels into 4 JSON dictionary files (`id.json`, `en.json`, `zh.json`, `ar.json`) and strictly enforce that all code identifiers remain 100% standard programming English.
 *   **User Persona & Workflows:** Map out who the application users are (*personas*) and define system interaction scenarios (e.g., authentication flow, business transactions).
 *   **Session Policy Definition:** Establish the rule that each user account is only permitted to be active on **1 device/browser** at a time and restrict multi-tab usage (*Single Session & Tab Concurrency Control*).
 

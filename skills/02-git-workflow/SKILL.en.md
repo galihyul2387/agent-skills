@@ -3,7 +3,7 @@ name: git-workflow-version-control-best-practices
 description: Comprehensive guide for branching strategies, conventional commits, pull request workflow, code merge, rich tagging, and release management.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

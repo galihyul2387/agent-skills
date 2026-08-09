@@ -3,7 +3,7 @@ name: complete-integration-best-practices
 description: Panduan integrasi menyeluruh mencakup API Gateway, CORS strict, Correlation ID request tracing, mTLS antar layanan, dan E2E contract testing.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

@@ -3,7 +3,7 @@ name: backend-complete-development-best-practices
 description: Panduan lengkap Backend Development polyglot (.NET 10 LTS, Node, Python, Go, Java, PHP, Rust), Microservices, SonarQube A+, HTTP Security Headers, RFC 7807, dan Redis Caching.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

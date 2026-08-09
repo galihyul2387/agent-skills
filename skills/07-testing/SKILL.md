@@ -3,7 +3,7 @@ name: testing-qa-complete-best-practices
 description: Panduan pengujian menyeluruh (SIT, UAT, load testing k6, OWASP ZAP security scan, regresi otomatis) dan otomatisasi dokumen pengujian.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: frontend-complete-development-best-practices
-description: Comprehensive guide for Frontend Development covering Angular 17+ Standalone & Signals, React/Vue, input validation, cross-browser single-session control, a11y, and Definition of Done.
+description: Comprehensive Frontend Development guide covering Responsive Web Design (Mobile-First RWD), Angular 17+ Standalone & Signals, React, 4-language i18n (Arabic RTL), cross-browser single-session, and Definition of Done.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 
@@ -134,6 +134,52 @@ To ensure the user interface can switch dynamically (*real-time*) supporting 4 m
 
 ---
 
+## 10. Responsive Web Design (RWD) Standards
+
+The application must be designed and built to look balanced, highly usable, and completely free of accidental horizontal scrolling across all screen dimensions:
+
+### Mobile-First Approach
+*   **Mobile-First Implementation:** Build for mobile viewports (`< 640px`) first as the base style, then progressively enhance for larger screens using `min-width` media queries (e.g., Tailwind CSS `sm:`, `md:`, `lg:`, `xl:`, `2xl:`).
+*   **Mandatory Viewport Meta Tag:** Ensure `index.html` contains:
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    ```
+
+### Standard Industry Breakpoints
+
+| Breakpoint | Target Viewport | Devices | Layout Pattern |
+|:---:|:---:|:---|:---|
+| **Mobile (`< 640px`)** | `320px - 639px` | Smartphone portrait & landscape | Single-column stacked layout, Hamburger/Bottom bar navigation, modal bottom sheet. |
+| **Tablet (`md: 768px`)**| `640px - 1023px`| iPad, Tablets, foldable screens | 2-column responsive grid, off-canvas / collapsible sidebar. |
+| **Desktop (`lg: 1024px`)**| `1024px - 1439px`| Standard laptops, Desktop monitors | Multi-column grid (3-4 columns), persistent navigation sidebar, split pane. |
+| **Large Displays (`2xl: 1536px`)**| `≥ 1440px` | 4K & Ultrawide monitors | Max-width content containers (`max-w-7xl` / `container`) to prevent overstretching. |
+
+### Modern Fluid Layouts
+*   **Auto-fit CSS Grid:** Create responsive card grids without rigid media query breakpoints:
+    ```css
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    ```
+*   **Flexbox Wrapping:** Ensure button toolbars and metadata chips wrap naturally with `flex-wrap: wrap` and `gap`.
+*   **Fluid Typography & Spacing:** Use `clamp()` for smoothly scalable text and padding across viewport widths:
+    ```css
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1rem, 3vw, 2.5rem);
+    ```
+
+### Responsive Media & CLS Prevention
+*   **Fluid Images:** Apply `max-width: 100%; height: auto;` globally on `<img>` and `<video>` elements.
+*   **Aspect Ratio:** Declare explicit `aspect-ratio` or `width`/`height` attributes on images to prevent Cumulative Layout Shift (CLS).
+
+### Touch & Mobile Ergonomics
+*   **Minimum Tap Target Size (44-48px):** Ensure interactive elements (buttons, inputs, icons) meet the **44 × 44 px** minimum tap target size (Apple HIG / Material Design).
+*   **Safe Area Insets:** Account for camera cutouts (*notches*) and home indicator bars:
+    ```css
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    ```
+
+---
+
 ## ⚡ Multi-Framework Command Cheat Sheet
 
 ### React / Next.js / Vue / Svelte
@@ -160,10 +206,14 @@ To ensure the user interface can switch dynamically (*real-time*) supporting 4 m
 
 ## ✅ Checklist & Definition of Done (DoD)
 
+*   [ ] Mobile-First approach is implemented with standard breakpoints (`sm`, `md`, `lg`, `xl`).
+*   [ ] Zero accidental horizontal scrollbars across all screen widths (320px to 4K).
+*   [ ] Minimum interactive touch target of 44 × 44 px on mobile viewports.
+*   [ ] Images have `max-width: 100%` and `aspect-ratio` defined to eliminate CLS.
 *   [ ] Multi-tab restriction is active via `BroadcastChannel` with `localStorage` fallback.
 *   [ ] Angular 17+ uses *Standalone Components* and *Angular Signals* (if Angular).
 *   [ ] New Control Flow (`@if`, `@for` with `track`, `@switch`) is applied.
-*   [ ] Bilingual UI (Bahasa Indonesia & English) is implemented via JSON dictionaries and language switcher component.
+*   [ ] Multi-language UI (ID, EN, ZH, AR with RTL) is implemented via JSON dictionaries and language switcher.
 *   [ ] Form inputs are validated via schema (Zod/Yup).
 *   [ ] WCAG 2.1 AA accessibility score exceeds 90 on Lighthouse.
 *   [ ] No raw credentials or access tokens are stored in `localStorage`.

@@ -3,7 +3,7 @@ name: git-workflow-version-control-best-practices
 description: Panduan branching strategy, commit conventions, pull request workflow, code merge, tagging, dan manajemen release menggunakan Git.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

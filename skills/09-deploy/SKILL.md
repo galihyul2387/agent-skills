@@ -3,7 +3,7 @@ name: deployment-docker-best-practices
 description: Panduan lengkap dan terstruktur untuk tahap Deployment menggunakan Docker, mencakup pembuatan Multi-stage Dockerfile, Docker Compose untuk arsitektur Microservices, manajemen environment variables yang aman, optimasi container, hingga Definition of Done.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

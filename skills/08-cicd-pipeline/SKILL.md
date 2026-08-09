@@ -3,7 +3,7 @@ name: cicd-pipeline-automation-best-practices
 description: Panduan pembuatan dan optimasi CI/CD pipeline, automated testing gates, security scanning, dependency caching, dan automated deployment.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

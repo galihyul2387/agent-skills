@@ -3,7 +3,7 @@ name: cicd-pipeline-automation-best-practices
 description: Comprehensive CI/CD pipeline automation guide covering GitHub Actions/GitLab CI, automated quality gates, security scanning, dependency caching, and rollback strategies.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: monitoring-observability-best-practices
-description: Panduan setup monitoring, alerting, logging produksi, dan observability mencakup Prometheus, Grafana, health checks, APM, dan incident response.
+description: Panduan menyeluruh implementasi 3 pilar Observability (Metrics, Logs, Traces), Prometheus, Grafana, OpenTelemetry, Centralized Logging, alerting, dan incident response.
 ---
 
-[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md)
+[ 🇮🇩 Bahasa Indonesia ](SKILL.md) | [ 🇬🇧 English ](SKILL.en.md) | [ 🇨🇳 简体中文 ](SKILL.zh.md) | [ 🇸🇦 العربية ](SKILL.ar.md)
 
 ---
 
